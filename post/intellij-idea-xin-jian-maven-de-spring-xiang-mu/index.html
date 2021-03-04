@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>IntelliJ IDEA新建maven的spring项目 | slyuan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://siliyuan6.github.io/favicon.ico?v=1614837053859">
+<link rel="stylesheet" href="https://siliyuan6.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="IntelliJ IDEA新建maven的spring项目
+
+
+
+
+
+pom.xml添加如下代码：
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/gr..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://siliyuan6.github.io">
+        <img src="https://siliyuan6.github.io/images/avatar.png?v=1614837053859" class="site-logo">
+        <h1 class="site-title">slyuan</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/siliyuan6" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/yuan-yuan-91-56-15" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://siliyuan6.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">IntelliJ IDEA新建maven的spring项目</h2>
+            <div class="post-date">2021-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <h3 id="intellij-idea新建maven的spring项目">IntelliJ IDEA新建maven的spring项目</h3>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/2067467/202103/2067467-20210303111231424-1583270080.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://img2020.cnblogs.com/blog/2067467/202103/2067467-20210303111235179-1407138915.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://img2020.cnblogs.com/blog/2067467/202103/2067467-20210303111250774-939085840.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://img2020.cnblogs.com/blog/2067467/202103/2067467-20210303111253718-2055601314.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://img2020.cnblogs.com/blog/2067467/202103/2067467-20210303111257515-267389612.png" alt="" loading="lazy"></figure>
+<p>pom.xml添加如下代码：</p>
+<pre><code class="language-xml">    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+      &lt;version&gt;4.3.13.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<p>Bean.xml文件代码：</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;bean id=&quot;helloworld&quot; class=&quot;org.example.HelloWorld&quot;&gt;
+        &lt;property name=&quot;message&quot; value=&quot;Hello World!&quot;/&gt;
+
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre>
+<p>App.java:</p>
+<pre><code class="language-java">package org.example;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( &quot;Hello World!&quot; );
+    }
+}
+
+</code></pre>
+<p>HelloWorld.java:</p>
+<pre><code class="language-java">package org.example;
+
+public class HelloWorld {
+    private String message;
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public void getMessage() {
+        System.out.println(&quot;Your Message：&quot; + message);
+    }
+}
+
+</code></pre>
+<p>MainApp.java:</p>
+<pre><code class="language-java">package org.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+    public static void main(String[] args) {
+        //创建应用程序的上下文
+        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;Bean.xml&quot;);
+        //使用已创建的上下文的 getBean() 方法来获得所需的 bean，这个方法使用 bean 的 ID 返回一个最终可以转换为实际对象的通用对象。
+        HelloWorld obj = (HelloWorld) context.getBean(&quot;helloworld&quot;);
+        obj.getMessage();
+    }
+}
+</code></pre>
+
+            </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
