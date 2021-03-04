@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://siliyuan.top</id>
+    <id>https://siliyuan6.github.io</id>
     <title>slyuan</title>
-    <updated>2021-03-04T04:15:11.102Z</updated>
+    <updated>2021-03-04T04:17:21.365Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://siliyuan.top"/>
-    <link rel="self" href="https://siliyuan.top/atom.xml"/>
+    <link rel="alternate" href="https://siliyuan6.github.io"/>
+    <link rel="self" href="https://siliyuan6.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://siliyuan.top/images/avatar.png</logo>
-    <icon>https://siliyuan.top/favicon.ico</icon>
+    <logo>https://siliyuan6.github.io/images/avatar.png</logo>
+    <icon>https://siliyuan6.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, slyuan</rights>
 </feed>
