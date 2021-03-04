@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://siliyuan6.github.io</id>
     <title>SLYUAN</title>
-    <updated>2021-03-04T07:38:17.979Z</updated>
+    <updated>2021-03-04T07:41:13.237Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://siliyuan6.github.io"/>
     <link rel="self" href="https://siliyuan6.github.io/atom.xml"/>
@@ -10,6 +10,91 @@
     <logo>https://siliyuan6.github.io/images/avatar.png</logo>
     <icon>https://siliyuan6.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, SLYUAN</rights>
+    <entry>
+        <title type="html"><![CDATA[初始化ADC1]]></title>
+        <id>https://siliyuan6.github.io/post/chu-shi-hua-adc1/</id>
+        <link href="https://siliyuan6.github.io/post/chu-shi-hua-adc1/">
+        </link>
+        <updated>2021-03-04T07:38:49.000Z</updated>
+        <content type="html"><![CDATA[<p>/* */<br>
+void ADC1_Init(void)<br>
+{<br>
+//定义DMA和ADC的结构体<br>
+DMA_InitTypeDef DMA_InitStructure;<br>
+ADC_InitTypeDef ADC_InitStructure;</p>
+<pre><code>//GPIO端口初始化，模拟输入
+pinMode(GPIOA, GPIO_Pin_2, GPIO_Mode_AIN);
+pinMode(GPIOA, GPIO_Pin_3, GPIO_Mode_AIN);
+pinMode(GPIOA, GPIO_Pin_4, GPIO_Mode_AIN);
+pinMode(GPIOA, GPIO_Pin_5, GPIO_Mode_AIN);
+pinMode(GPIOA, GPIO_Pin_6, GPIO_Mode_AIN);
+
+RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);                      /* 使能MDA1时钟 */
+/* DMA channel1 configuration */
+DMA_DeInit(DMA1_Channel1);                                              /* 指定DMA通道 */
+DMA_InitStructure.DMA_PeripheralBaseAddr	= ADC1_DR_Address;            /* 设置DMA外设地址 */
+DMA_InitStructure.DMA_MemoryBaseAddr		= (u32) &amp; ADC_ConvertedValue;   /* 设置DMA内存地址，ADC转换结果直接放入该地址 */
+DMA_InitStructure.DMA_DIR			= DMA_DIR_PeripheralSRC;                  /* 外设为设置为数据传输的来源 */
+DMA_InitStructure.DMA_BufferSize		= ADC_CHANEL_NUM;                   /* DMA缓冲区设置为1； */
+DMA_InitStructure.DMA_PeripheralInc		= DMA_PeripheralInc_Disable;
+DMA_InitStructure.DMA_MemoryInc			= DMA_MemoryInc_Enable;
+DMA_InitStructure.DMA_PeripheralDataSize	= DMA_PeripheralDataSize_HalfWord;
+DMA_InitStructure.DMA_MemoryDataSize		= DMA_MemoryDataSize_HalfWord;
+DMA_InitStructure.DMA_Mode			= DMA_Mode_Circular;
+DMA_InitStructure.DMA_Priority			= DMA_Priority_High;
+DMA_InitStructure.DMA_M2M			= DMA_M2M_Disable;
+DMA_Init(DMA1_Channel1, &amp;DMA_InitStructure);
+
+/* Enable DMA channel1 */
+DMA_Cmd(DMA1_Channel1, ENABLE);                                                 /* 使能DMA通道 */
+
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);                            /* 使能ADC1时钟 */
+
+/* ADC1 configuration */
+ADC_InitStructure.ADC_Mode			= ADC_Mode_Independent;         /* 使用独立模式，扫描模式 */
+ADC_InitStructure.ADC_ScanConvMode		= ENABLE;
+ADC_InitStructure.ADC_ContinuousConvMode	= ENABLE;                       /* 无需外接触发器 */
+ADC_InitStructure.ADC_ExternalTrigConv		= ADC_ExternalTrigConv_None;    /* 使用数据右对齐 */
+ADC_InitStructure.ADC_DataAlign			= ADC_DataAlign_Right;
+ADC_InitStructure.ADC_NbrOfChannel		= ADC_CHANEL_NUM;               /* 只有1个转换通道 */
+ADC_Init(ADC1, &amp;ADC_InitStructure);
+
+/* ADC1 regular channel11 configuration */
+</code></pre>
+<p>/* 通道1采样周期55.5个时钟周期 */<br>
+ADC_RegularChannelConfig(ADC1, ADC_Channel_2, 1, ADC_SampleTime_55Cycles5);<br>
+ADC_RegularChannelConfig(ADC1, ADC_Channel_3, 2, ADC_SampleTime_55Cycles5);<br>
+ADC_RegularChannelConfig(ADC1, ADC_Channel_4, 3, ADC_SampleTime_55Cycles5);<br>
+ADC_RegularChannelConfig(ADC1, ADC_Channel_5, 4, ADC_SampleTime_55Cycles5);<br>
+ADC_RegularChannelConfig(ADC1, ADC_Channel_6, 5, ADC_SampleTime_55Cycles5);</p>
+<pre><code>/* Enable ADC1 DMA */
+ADC_DMACmd(ADC1, ENABLE);       /* 使能ADC的DMA */
+
+/* Enable ADC1 */
+ADC_Cmd(ADC1, ENABLE);          /* 使能ADC1 */
+
+/* Enable ADC1 reset calibaration register */
+ADC_ResetCalibration(ADC1);
+/* Check the end of ADC1 reset calibration register */
+while(ADC_GetResetCalibrationStatus(ADC1) )
+{
+	;
+}
+
+/* Start ADC1 calibaration */
+ADC_StartCalibration(ADC1);
+/* Check the end of ADC1 calibration */
+while(ADC_GetCalibrationStatus(ADC1) )
+{
+	;
+}
+
+/* Start ADC1 Software Conversion */
+ADC_SoftwareStartConvCmd(ADC1, ENABLE); /* 开始转换 */
+</code></pre>
+<p>}</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Period和Prescaler转载]]></title>
         <id>https://siliyuan6.github.io/post/period-he-prescaler-zhuan-zai/</id>
@@ -1300,206 +1385,6 @@ void MPU6050_Configuration(void)
 
 }
 
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[stm32编码器测速]]></title>
-        <id>https://siliyuan6.github.io/post/stm32-bian-ma-qi-ce-su/</id>
-        <link href="https://siliyuan6.github.io/post/stm32-bian-ma-qi-ce-su/">
-        </link>
-        <updated>2021-03-04T06:46:07.000Z</updated>
-        <content type="html"><![CDATA[<p>摘要：编码器是一种将角位移或者角速度转换成一串电数字脉冲的旋转式传感器。编码器又分为光电编码器和霍尔编码器。</p>
-<p>霍尔编码器是有霍尔码盘和霍尔元件组成。霍尔码盘是在一定直径的圆板上等分的布置有不同的磁极。霍尔码盘与电动机同轴，电动机旋转时，霍尔元件检测输出若干脉冲信号，为判断转向，一般输出两组存在一定相位差的方波信号。<br>
-<a href="https://imgchr.com/i/Dv7n3R"><img src="https://s3.ax1x.com/2020/12/07/Dv7n3R.png" alt="Dv7n3R.png" loading="lazy"></a></p>
-<p>采集数据方式：</p>
-<p>第一种软件技术直接采用外部中断进行采集，根据AB相位差的不同可以判断正负。</p>
-<p>第二种硬件技术直接使用定时器的编码器模式。</p>
-<p>这里采用第二种。也是大家常说的四倍频，提高测量精度的方法。其实就是把AB相的上升沿和下降沿都采集而已，所以1变4。自己使用外部中断方式实现就比较占用资源了，所以不建议使用。</p>
-<p>速度计算方法：</p>
-<p>真实的物理转速：</p>
-<p>电机转动一圈的脉冲数：num1				 单位：个</p>
-<p>单位时间：t 												单位：秒</p>
-<p>单位时间内捕获的脉冲变化数：num2 	单位：个 （反应电机正反转）</p>
-<p>电机轮子半径：r										 单位：m</p>
-<p>圆周率：pi 												  单位：无</p>
-<p>速度：speed           								    单位： mm/s</p>
-<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/Dv7ug1"><img src="https://s3.ax1x.com/2020/12/07/Dv7ug1.png" alt="Dv7ug1.png" loading="lazy"></a></figure>
-<p>因为半径用的是m为单位，速度为mm所以需要乘以1000。</p>
-<p>代码：（使用TIM2和TIM4两个定时器来测两个轮子的速度）</p>
-<p>将编码器AB相使用的引脚设置成定时器的编码器模式，我们根据TIMx-&gt;CNT寄存器数据的变化，计算出单位时间内，脉冲的变化值。</p>
-<p>然后在定时器中断服务函数中进行速度计算。</p>
-<pre><code class="language-C">#include &quot;encoder.h&quot;
-
-/**************************************************************************
-函数功能：把TIM2初始化为编码器接口模式
-入口参数：无
-返回  值：无
-**************************************************************************/
-void Encoder_Init_TIM2(void)
-{
-	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;  
-	TIM_ICInitTypeDef TIM_ICInitStructure;  
-	GPIO_InitTypeDef GPIO_InitStructure;
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);    //使能定时器2的时钟
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);   //使能PA端口时钟
-
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1;	//端口配置
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;   //浮空输入
-	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);					//根据设定参数初始化GPIOA
-
-	TIM_TimeBaseStructInit(&amp;TIM_TimeBaseStructure);
-	TIM_TimeBaseStructure.TIM_Prescaler = 0x0;              //预分频器 
-	TIM_TimeBaseStructure.TIM_Period = ENCODER_TIM_PERIOD;  //设定计数器自动重装值
-	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //选择时钟分频：不分频
-	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;TIM向上计数  
-	TIM_TimeBaseInit(TIM2, &amp;TIM_TimeBaseStructure);
-	
-	TIM_EncoderInterfaceConfig(TIM2, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);//使用编码器模式3
-	
-	TIM_ICStructInit(&amp;TIM_ICInitStructure);
-	TIM_ICInitStructure.TIM_ICFilter = 10;
-	TIM_ICInit(TIM2, &amp;TIM_ICInitStructure);
-	TIM_ClearFlag(TIM2, TIM_FLAG_Update);                   //清除TIM的更新标志位
-	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
-	//Reset counter
-	TIM_SetCounter(TIM2,0);
-	//===============================================
-	TIM2-&gt;CNT = 0x7fff;
-	//===============================================
-	TIM_Cmd(TIM2, ENABLE); 
-}
-/**************************************************************************
-函数功能：把TIM4初始化为编码器接口模式
-入口参数：无
-返回  值：无
-**************************************************************************/
-void Encoder_Init_TIM4(void)
-{
-	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;  
-	TIM_ICInitTypeDef TIM_ICInitStructure;  
-	GPIO_InitTypeDef GPIO_InitStructure;
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);    //使能定时器4的时钟
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);   //使能PB端口时钟
-
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6|GPIO_Pin_7;	//端口配置
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;   //浮空输入
-	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);					//根据设定参数初始化GPIOB
-
-	TIM_TimeBaseStructInit(&amp;TIM_TimeBaseStructure);
-	TIM_TimeBaseStructure.TIM_Prescaler = 0x0;              // 预分频器 
-	TIM_TimeBaseStructure.TIM_Period = ENCODER_TIM_PERIOD;  //设定计数器自动重装值
-	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //选择时钟分频：不分频
-	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;TIM向上计数  
-	TIM_TimeBaseInit(TIM4, &amp;TIM_TimeBaseStructure);
-	TIM_EncoderInterfaceConfig(TIM4, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);//使用编码器模式3
-	TIM_ICStructInit(&amp;TIM_ICInitStructure);
-	TIM_ICInitStructure.TIM_ICFilter = 10;
-	TIM_ICInit(TIM4, &amp;TIM_ICInitStructure);
-	TIM_ClearFlag(TIM4, TIM_FLAG_Update);                   //清除TIM的更新标志位
-	TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
-	//Reset counter
-	TIM_SetCounter(TIM4,0);
-	//===============================================
-	TIM4-&gt;CNT = 0x7fff;
-	//===============================================
-	TIM_Cmd(TIM4, ENABLE); 
-}
-
-/**************************************************************************
-函数功能：读取编码器脉冲差值，读取单位时间内的脉冲变化值
-入口参数：TIM_TypeDef * TIMx
-返回  值：无
-**************************************************************************/
-s16 getTIMx_DetaCnt(TIM_TypeDef * TIMx)
-{
-	s16 cnt;
-	cnt = TIMx-&gt;CNT-0x7fff;
-	TIMx-&gt;CNT = 0x7fff;
-	return cnt;
-}
-
-/**************************************************************************
-函数功能：计算左右轮速
-入口参数：int *leftSpeed,int *rightSpeed
-返回  值：无
-		//计算左右车轮线速度，正向速度为正值 ，反向速度为负值，速度为乘以1000之后的速度 mm/s
-		//一定时间内的编码器变化值*转化率（转化为直线上的距离m）*200s（5ms计算一次） 得到 m/s *1000转化为int数据
-
-		一圈的脉冲数：
-			左：1560
-			右：1560
-		轮子半径：0.03m
-		轮子周长：2*pi*r
-		一个脉冲的距离：
-			左：0.000120830m
-			右：0.000120830m
-		速度分辨率：
-			左： 0.0240m/s 
-			右： 0.0240m/s 
-			200  5ms的倒数
-			1000 扩大分辨率
-**************************************************************************/
-
-void Get_Motor_Speed(int *leftSpeed,int *rightSpeed)
-{
-	//5ms测速 5ms即这里说的单位时间  	
-	*leftSpeed   = getTIMx_DetaCnt(TIM4)*1000*200*0.000120830;  
-	*rightSpeed  = getTIMx_DetaCnt(TIM2)*1000*200*0.000120830;
-}
-
-</code></pre>
-<p>main.c</p>
-<pre><code class="language-C">#include &quot;sys.h&quot;
-
-//====================自己加入的头文件===============================
-#include &quot;delay.h&quot;
-#include &quot;led.h&quot;
-#include &quot;encoder.h&quot;
-#include &quot;usart3.h&quot;
-#include &quot;timer.h&quot;
-#include &lt;stdio.h&gt;
-//===================================================================
-
-int leftSpeedNow  =0;
-int rightSpeedNow =0;
-
-int main(void)
-{ 
-
-	GPIO_PinRemapConfig(GPIO_Remap_SWJ_Disable,ENABLE);
-	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);//禁用JTAG 启用 SWD
-	
-	MY_NVIC_PriorityGroupConfig(2);	//=====设置中断分组
-	
-	delay_init();	    	        //=====延时函数初始化
-	LED_Init();                     //=====LED初始化    程序灯	
-	
-	usart3_init(9600);              //=====串口3初始化  蓝牙 发送调试信息
-
-	Encoder_Init_TIM2();            //=====初始化编码器1接口
-	Encoder_Init_TIM4();            //=====初始化编码器2接口
-	
-	TIM3_Int_Init(50-1,7200-1);     //=====定时器初始化 5ms一次中断
-	
-	while(1)
-	{
-		printf(&quot;L=%d,R=%d\r\n&quot;,leftSpeedNow,rightSpeedNow);
-		delay_ms(15);
-	} 
-}
-
-//5ms 定时器中断服务函数
-void TIM3_IRQHandler(void)   //TIM3中断
-{
-	if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) //检查指定的TIM中断发生与否:TIM 中断源 
-	{
-		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);   //清除TIMx的中断待处理位:TIM 中断源 
-		
-		Get_Motor_Speed(&amp;leftSpeedNow,&amp;rightSpeedNow);
-		Led_Flash(100);
-	}
-}
 </code></pre>
 ]]></content>
     </entry>
