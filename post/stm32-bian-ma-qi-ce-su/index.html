@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>stm32编码器测速 | SLYUAN</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://siliyuan6.github.io/favicon.ico?v=1614840602444">
+<link rel="stylesheet" href="https://siliyuan6.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="摘要：编码器是一种将角位移或者角速度转换成一串电数字脉冲的旋转式传感器。编码器又分为光电编码器和霍尔编码器。
+霍尔编码器是有霍尔码盘和霍尔元件组成。霍尔码盘是在一定直径的圆板上等分的布置有不同的磁极。霍尔码盘与电动机同轴，电动机旋转时，霍尔..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://siliyuan6.github.io">
+        <img src="https://siliyuan6.github.io/images/avatar.png?v=1614840602444" class="site-logo">
+        <h1 class="site-title">SLYUAN</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/siliyuan6" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/yuan-yuan-91-56-15" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      "十年饮冰，难凉热血"
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://siliyuan6.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">stm32编码器测速</h2>
+            <div class="post-date">2021-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <p>摘要：编码器是一种将角位移或者角速度转换成一串电数字脉冲的旋转式传感器。编码器又分为光电编码器和霍尔编码器。</p>
+<p>霍尔编码器是有霍尔码盘和霍尔元件组成。霍尔码盘是在一定直径的圆板上等分的布置有不同的磁极。霍尔码盘与电动机同轴，电动机旋转时，霍尔元件检测输出若干脉冲信号，为判断转向，一般输出两组存在一定相位差的方波信号。<br>
+<a href="https://imgchr.com/i/Dv7n3R"><img src="https://s3.ax1x.com/2020/12/07/Dv7n3R.png" alt="Dv7n3R.png" loading="lazy"></a></p>
+<p>采集数据方式：</p>
+<p>第一种软件技术直接采用外部中断进行采集，根据AB相位差的不同可以判断正负。</p>
+<p>第二种硬件技术直接使用定时器的编码器模式。</p>
+<p>这里采用第二种。也是大家常说的四倍频，提高测量精度的方法。其实就是把AB相的上升沿和下降沿都采集而已，所以1变4。自己使用外部中断方式实现就比较占用资源了，所以不建议使用。</p>
+<p>速度计算方法：</p>
+<p>真实的物理转速：</p>
+<p>电机转动一圈的脉冲数：num1				 单位：个</p>
+<p>单位时间：t 												单位：秒</p>
+<p>单位时间内捕获的脉冲变化数：num2 	单位：个 （反应电机正反转）</p>
+<p>电机轮子半径：r										 单位：m</p>
+<p>圆周率：pi 												  单位：无</p>
+<p>速度：speed           								    单位： mm/s</p>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/Dv7ug1"><img src="https://s3.ax1x.com/2020/12/07/Dv7ug1.png" alt="Dv7ug1.png" loading="lazy"></a></figure>
+<p>因为半径用的是m为单位，速度为mm所以需要乘以1000。</p>
+<p>代码：（使用TIM2和TIM4两个定时器来测两个轮子的速度）</p>
+<p>将编码器AB相使用的引脚设置成定时器的编码器模式，我们根据TIMx-&gt;CNT寄存器数据的变化，计算出单位时间内，脉冲的变化值。</p>
+<p>然后在定时器中断服务函数中进行速度计算。</p>
+<pre><code class="language-C">#include &quot;encoder.h&quot;
+
+/**************************************************************************
+函数功能：把TIM2初始化为编码器接口模式
+入口参数：无
+返回  值：无
+**************************************************************************/
+void Encoder_Init_TIM2(void)
+{
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;  
+	TIM_ICInitTypeDef TIM_ICInitStructure;  
+	GPIO_InitTypeDef GPIO_InitStructure;
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);    //使能定时器2的时钟
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);   //使能PA端口时钟
+
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1;	//端口配置
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;   //浮空输入
+	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);					//根据设定参数初始化GPIOA
+
+	TIM_TimeBaseStructInit(&amp;TIM_TimeBaseStructure);
+	TIM_TimeBaseStructure.TIM_Prescaler = 0x0;              //预分频器 
+	TIM_TimeBaseStructure.TIM_Period = ENCODER_TIM_PERIOD;  //设定计数器自动重装值
+	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //选择时钟分频：不分频
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;TIM向上计数  
+	TIM_TimeBaseInit(TIM2, &amp;TIM_TimeBaseStructure);
+	
+	TIM_EncoderInterfaceConfig(TIM2, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);//使用编码器模式3
+	
+	TIM_ICStructInit(&amp;TIM_ICInitStructure);
+	TIM_ICInitStructure.TIM_ICFilter = 10;
+	TIM_ICInit(TIM2, &amp;TIM_ICInitStructure);
+	TIM_ClearFlag(TIM2, TIM_FLAG_Update);                   //清除TIM的更新标志位
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+	//Reset counter
+	TIM_SetCounter(TIM2,0);
+	//===============================================
+	TIM2-&gt;CNT = 0x7fff;
+	//===============================================
+	TIM_Cmd(TIM2, ENABLE); 
+}
+/**************************************************************************
+函数功能：把TIM4初始化为编码器接口模式
+入口参数：无
+返回  值：无
+**************************************************************************/
+void Encoder_Init_TIM4(void)
+{
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;  
+	TIM_ICInitTypeDef TIM_ICInitStructure;  
+	GPIO_InitTypeDef GPIO_InitStructure;
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);    //使能定时器4的时钟
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);   //使能PB端口时钟
+
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6|GPIO_Pin_7;	//端口配置
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;   //浮空输入
+	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);					//根据设定参数初始化GPIOB
+
+	TIM_TimeBaseStructInit(&amp;TIM_TimeBaseStructure);
+	TIM_TimeBaseStructure.TIM_Prescaler = 0x0;              // 预分频器 
+	TIM_TimeBaseStructure.TIM_Period = ENCODER_TIM_PERIOD;  //设定计数器自动重装值
+	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //选择时钟分频：不分频
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;TIM向上计数  
+	TIM_TimeBaseInit(TIM4, &amp;TIM_TimeBaseStructure);
+	TIM_EncoderInterfaceConfig(TIM4, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);//使用编码器模式3
+	TIM_ICStructInit(&amp;TIM_ICInitStructure);
+	TIM_ICInitStructure.TIM_ICFilter = 10;
+	TIM_ICInit(TIM4, &amp;TIM_ICInitStructure);
+	TIM_ClearFlag(TIM4, TIM_FLAG_Update);                   //清除TIM的更新标志位
+	TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
+	//Reset counter
+	TIM_SetCounter(TIM4,0);
+	//===============================================
+	TIM4-&gt;CNT = 0x7fff;
+	//===============================================
+	TIM_Cmd(TIM4, ENABLE); 
+}
+
+/**************************************************************************
+函数功能：读取编码器脉冲差值，读取单位时间内的脉冲变化值
+入口参数：TIM_TypeDef * TIMx
+返回  值：无
+**************************************************************************/
+s16 getTIMx_DetaCnt(TIM_TypeDef * TIMx)
+{
+	s16 cnt;
+	cnt = TIMx-&gt;CNT-0x7fff;
+	TIMx-&gt;CNT = 0x7fff;
+	return cnt;
+}
+
+/**************************************************************************
+函数功能：计算左右轮速
+入口参数：int *leftSpeed,int *rightSpeed
+返回  值：无
+		//计算左右车轮线速度，正向速度为正值 ，反向速度为负值，速度为乘以1000之后的速度 mm/s
+		//一定时间内的编码器变化值*转化率（转化为直线上的距离m）*200s（5ms计算一次） 得到 m/s *1000转化为int数据
+
+		一圈的脉冲数：
+			左：1560
+			右：1560
+		轮子半径：0.03m
+		轮子周长：2*pi*r
+		一个脉冲的距离：
+			左：0.000120830m
+			右：0.000120830m
+		速度分辨率：
+			左： 0.0240m/s 
+			右： 0.0240m/s 
+			200  5ms的倒数
+			1000 扩大分辨率
+**************************************************************************/
+
+void Get_Motor_Speed(int *leftSpeed,int *rightSpeed)
+{
+	//5ms测速 5ms即这里说的单位时间  	
+	*leftSpeed   = getTIMx_DetaCnt(TIM4)*1000*200*0.000120830;  
+	*rightSpeed  = getTIMx_DetaCnt(TIM2)*1000*200*0.000120830;
+}
+
+</code></pre>
+<p>main.c</p>
+<pre><code class="language-C">#include &quot;sys.h&quot;
+
+//====================自己加入的头文件===============================
+#include &quot;delay.h&quot;
+#include &quot;led.h&quot;
+#include &quot;encoder.h&quot;
+#include &quot;usart3.h&quot;
+#include &quot;timer.h&quot;
+#include &lt;stdio.h&gt;
+//===================================================================
+
+int leftSpeedNow  =0;
+int rightSpeedNow =0;
+
+int main(void)
+{ 
+
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_Disable,ENABLE);
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);//禁用JTAG 启用 SWD
+	
+	MY_NVIC_PriorityGroupConfig(2);	//=====设置中断分组
+	
+	delay_init();	    	        //=====延时函数初始化
+	LED_Init();                     //=====LED初始化    程序灯	
+	
+	usart3_init(9600);              //=====串口3初始化  蓝牙 发送调试信息
+
+	Encoder_Init_TIM2();            //=====初始化编码器1接口
+	Encoder_Init_TIM4();            //=====初始化编码器2接口
+	
+	TIM3_Int_Init(50-1,7200-1);     //=====定时器初始化 5ms一次中断
+	
+	while(1)
+	{
+		printf(&quot;L=%d,R=%d\r\n&quot;,leftSpeedNow,rightSpeedNow);
+		delay_ms(15);
+	} 
+}
+
+//5ms 定时器中断服务函数
+void TIM3_IRQHandler(void)   //TIM3中断
+{
+	if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) //检查指定的TIM中断发生与否:TIM 中断源 
+	{
+		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);   //清除TIMx的中断待处理位:TIM 中断源 
+		
+		Get_Motor_Speed(&amp;leftSpeedNow,&amp;rightSpeedNow);
+		Led_Flash(100);
+	}
+}
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://siliyuan6.github.io/post/fusion360-jie-mian-zi-ti-mo-hu-chu-li-fang-fa/">
+                  <h3 class="post-title">
+                    fusion360界面字体模糊处理方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

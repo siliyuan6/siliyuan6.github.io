@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>JAVA基础知识回顾 | SLYUAN</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://siliyuan6.github.io/favicon.ico?v=1614840602444">
+<link rel="stylesheet" href="https://siliyuan6.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="JAVA基础知识回顾
+一、背景介绍
+
+
+JavaSE（J2SE）（Java2 Platform Standard Edition，java平台标准版）
+
+
+JavaEE(J2EE)(Java 2 Platform,Enterprise Ed..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://siliyuan6.github.io">
+        <img src="https://siliyuan6.github.io/images/avatar.png?v=1614840602444" class="site-logo">
+        <h1 class="site-title">SLYUAN</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/siliyuan6" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/yuan-yuan-91-56-15" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      "十年饮冰，难凉热血"
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://siliyuan6.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">JAVA基础知识回顾</h2>
+            <div class="post-date">2021-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="java基础知识回顾">JAVA基础知识回顾</h2>
+<h3 id="一-背景介绍">一、背景介绍</h3>
+<ul>
+<li>
+<p>JavaSE（J2SE）（Java2 Platform Standard Edition，java平台标准版）</p>
+</li>
+<li>
+<p>JavaEE(J2EE)(Java 2 Platform,Enterprise Edition，java平台企业版)</p>
+</li>
+<li>
+<p>JavaME(J2ME)(Java 2 Platform Micro Edition，java平台微型版)。</p>
+</li>
+</ul>
+<h3 id="二-基础概念">二、基础概念</h3>
+<h4 id="1-基础对象-类-方法-实例变量">1、基础（对象、类、方法、实例变量）</h4>
+<ul>
+<li>
+<p><strong>对象</strong>：对象是类的一个<strong>实例</strong>，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。</p>
+</li>
+<li>
+<p><strong>类</strong>：类是一个模板，它描述一类对象的行为和状态。</p>
+<p><strong>构造方法</strong>：每个类都有构造方法。是定义在java类中的一个用来初始化对象的方法，<strong>用new+构造方法，创建了一个新的对象</strong>，并可以给对象中的实例进行<strong>赋值</strong>。</p>
+<p>如果没有显式地为类定义构造方法，Java 编译器将会为该类提供一个默认构造方法。</p>
+<p>在创建一个对象的时候，<strong>至少要调用一个构造方法</strong>。构造方法的名称必须<strong>与类同名</strong>，<strong>一个类可以有多个构造方法</strong>。</p>
+<pre><code class="language-java">/* 实例化对象 */
+/*Object 类名；referenceVariable  实例名；Constructor  构造方法*/
+Object referenceVariable = new Constructor();
+/* 访问类中的变量 */
+referenceVariable.variableName;
+/* 访问类中的方法 */
+referenceVariable.methodName();
+</code></pre>
+</li>
+<li>
+<p><strong>方法</strong>：方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的</p>
+</li>
+<li>
+<p><strong>实例变量</strong>：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。</p>
+<pre><code class="language-java">基本类型：byte 二进制位数：8
+包装类：java.lang.Byte
+最小值：Byte.MIN_VALUE=-128
+最大值：Byte.MAX_VALUE=127
+
+基本类型：short 二进制位数：16
+包装类：java.lang.Short
+最小值：Short.MIN_VALUE=-32768
+最大值：Short.MAX_VALUE=32767
+
+基本类型：int 二进制位数：32
+包装类：java.lang.Integer
+最小值：Integer.MIN_VALUE=-2147483648
+最大值：Integer.MAX_VALUE=2147483647
+
+基本类型：long 二进制位数：64
+包装类：java.lang.Long
+最小值：Long.MIN_VALUE=-9223372036854775808
+最大值：Long.MAX_VALUE=9223372036854775807
+
+基本类型：float 二进制位数：32
+包装类：java.lang.Float
+最小值：Float.MIN_VALUE=1.4E-45
+最大值：Float.MAX_VALUE=3.4028235E38
+
+基本类型：double 二进制位数：64
+包装类：java.lang.Double
+最小值：Double.MIN_VALUE=4.9E-324
+最大值：Double.MAX_VALUE=1.7976931348623157E308
+
+基本类型：char 二进制位数：16
+包装类：java.lang.Character
+最小值：Character.MIN_VALUE=0
+最大值：Character.MAX_VALUE=65535
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>final</strong></p>
+<p>在 Java 中使用 final 关键字来修饰常量，声明方式和变量类似：</p>
+</li>
+</ul>
+<pre><code class="language-java">final double PI = 3.1415927;
+</code></pre>
+<ul>
+<li>
+<p><strong>变量类型</strong></p>
+<p>类变量：独立于方法之外的变量，用 <strong>static</strong> 修饰。</p>
+<p>实例变量：独立于方法之外的变量，不过<strong>没有 static</strong> 修饰。</p>
+<p>局部变量：类的方法中的变量。</p>
+</li>
+</ul>
+<h4 id="2-命名">2、命名</h4>
+<p><strong>编写 Java 程序时，应注意以下几点：</strong></p>
+<ul>
+<li><strong>大小写敏感</strong>：Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。</li>
+<li><strong>类名</strong>：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 <strong>MyFirstJavaClass</strong> 。</li>
+<li><strong>方法名</strong>：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。</li>
+<li><strong>源文件名</strong>：源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 <strong>.java</strong>。（如果文件名和类名不相同则会导致编译错误）。</li>
+<li><strong>主方法入口</strong>：所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行。</li>
+</ul>
+<h4 id="3-修饰符">3、修饰符</h4>
+<p><strong>JAVA修饰符</strong></p>
+<ul>
+<li>
+<p>访问控制修饰符 : default, public , protected, private</p>
+</li>
+<li>
+<p>非访问控制修饰符 : final, abstract, static, synchronized</p>
+</li>
+<li>
+<p><strong>public</strong>  子类可以看到，<strong>private</strong>  仅本类可见</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">修饰符</th>
+<th style="text-align:left">当前类</th>
+<th style="text-align:left">同一包内</th>
+<th style="text-align:left">子孙类(同一包)</th>
+<th style="text-align:left">子孙类(不同包)</th>
+<th style="text-align:left">其他包</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>public</code></td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>protected</code></td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y/N</td>
+<td style="text-align:left">N</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>default</code></td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">N</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>private</code></td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">N</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-关键字">4、关键字</h4>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210209174529924-1749528918.png" alt="" loading="lazy"></figure>
+<h4 id="5-继承">5、继承</h4>
+<p>在 Java 中，一个类可以由其他类派生。如果你要创建一个类，而且已经存在一个类具有你所需要的属性或方法，那么你可以将新创建的类继承该类。</p>
+<p>利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为<strong>超类</strong>（super class），派生类称为<strong>子类</strong>（subclass）。</p>
+<figure data-type="image" tabindex="2"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210209174540424-239645107.png" alt="" loading="lazy"></figure>
+<p><strong>extends关键词</strong></p>
+<p>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。</p>
+<p><strong>implements关键词</strong></p>
+<p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）。</p>
+<p><strong>super与this关键词</strong></p>
+<p>super关键字：我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。</p>
+<p>this关键字：指向自己的引用。</p>
+<h4 id="6-重写与重载">6、重写与重载</h4>
+<p><strong>重写（Override）</strong></p>
+<p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。<strong>即外壳不变，核心重写！</strong></p>
+<p>重写的好处在于子类可以根据需要，定义特定于自己的行为。 也就是说子类能够根据需要实现父类的方法。</p>
+<p><strong>方法的重写规则</strong></p>
+<ul>
+<li>参数列表与被重写方法的参数列表必须完全相同。</li>
+<li>返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</li>
+<li>访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</li>
+<li>父类的成员方法只能被它的子类重写。</li>
+<li>声明为 <strong>final</strong> 的方法不能被重写。</li>
+<li>声明为 <strong>static</strong> 的方法不能被重写，但是能够被<strong>再次声明</strong>。</li>
+<li>子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</li>
+<li>子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</li>
+<li>重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</li>
+<li>构造方法不能被重写。</li>
+<li>如果不能继承一个类，则不能重写该类的方法。</li>
+</ul>
+<p><strong>重载（Overload）</strong></p>
+<p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</p>
+<p>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。</p>
+<p>最常用的地方就是构造器的重载。</p>
+<p><strong>重写与重载之间的区别</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">区别点</th>
+<th style="text-align:left">重载方法</th>
+<th style="text-align:left">重写方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">参数列表</td>
+<td style="text-align:left">必须修改</td>
+<td style="text-align:left">一定不能修改</td>
+</tr>
+<tr>
+<td style="text-align:left">返回类型</td>
+<td style="text-align:left">可以修改</td>
+<td style="text-align:left">一定不能修改</td>
+</tr>
+<tr>
+<td style="text-align:left">异常</td>
+<td style="text-align:left">可以修改</td>
+<td style="text-align:left">可以减少或删除，一定不能抛出新的或者更广的异常</td>
+</tr>
+<tr>
+<td style="text-align:left">访问</td>
+<td style="text-align:left">可以修改</td>
+<td style="text-align:left">一定不能做更严格的限制（可以降低限制）</td>
+</tr>
+</tbody>
+</table>
+<figure data-type="image" tabindex="3"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210209174553213-993499239.png" alt="" loading="lazy"></figure>
+<h4 id="7-多态">7、多态</h4>
+<p><strong>同一个事件发生在不同的对象上会产生不同的结果。</strong></p>
+<p>当使用多态方式调用方法时，首先检查父类中是否有该方法，如果没有，则编译错误；如果有，再去调用子类的同名方法。</p>
+<p><strong>多态的实现方式</strong>：重写、接口、抽象类和抽象方法。</p>
+<h4 id="8-抽象类">8、抽象类</h4>
+<p><strong>定义</strong>：在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是<strong>抽象类</strong>。</p>
+<p><strong>特点</strong>：由于抽象类<strong>不能实例化对象</strong>，所以抽象类<strong>必须被继承</strong>，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。</p>
+<p>父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。</p>
+<p><strong>向上、下转型</strong></p>
+<p>向上：当向上转型之后，父类引用变量可以访问子类中<strong>属于父类的属性和方法</strong>，但是<strong>不能访问子类独有的属性和方法</strong>。</p>
+<pre><code class="language-java">Father my = new Son();
+</code></pre>
+<p>向下：并不是所有的对象都可以向下转型，<strong>只有当这个对象原本就是子类对象通过向上转型得到的时候才能够成功转型</strong>。</p>
+<pre><code>Father my = new Son();
+Father my_ = (Son) my;
+</code></pre>
+<h4 id="9-封装与接口">9、封装与接口</h4>
+<p><strong>定义</strong>：在面向对象程式设计方法中，<strong>封装</strong>（英语：Encapsulation）是指一种将抽象性函式接口的实现细节部分包装、隐藏起来的方法。</p>
+<p><strong>接口</strong>（英文：Interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合，接口通常以<strong>interface</strong>来声明。一个类通过继承接口的方式，从而来继承接口的抽象方法。</p>
+<p><strong>类</strong>描述对象的<strong>属性和方法</strong>。<strong>接口</strong>则包含<strong>类要实现的方法</strong>。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://siliyuan6.github.io/post/intellij-idea-xin-jian-maven-de-spring-xiang-mu/">
+                  <h3 class="post-title">
+                    IntelliJ IDEA新建maven的spring项目
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

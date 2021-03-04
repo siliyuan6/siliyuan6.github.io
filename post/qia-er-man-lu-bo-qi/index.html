@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>卡尔曼滤波器 | SLYUAN</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://siliyuan6.github.io/favicon.ico?v=1614840602444">
+<link rel="stylesheet" href="https://siliyuan6.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="卡尔曼滤波器
+预备知识：
+协方差：用于表示两个变量的总体误差，如果两个变化趋势一致则协方差为正值，变化趋势不一致则为负值。
+
+从直观上来看，协方差表示的是两个变量总体误差的期望。
+公式讲解：
+预测状态方程
+由k-1时刻的最优值和系统输入计算..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://siliyuan6.github.io">
+        <img src="https://siliyuan6.github.io/images/avatar.png?v=1614840602444" class="site-logo">
+        <h1 class="site-title">SLYUAN</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/siliyuan6" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/yuan-yuan-91-56-15" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      "十年饮冰，难凉热血"
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://siliyuan6.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">卡尔曼滤波器</h2>
+            <div class="post-date">2021-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="卡尔曼滤波器">卡尔曼滤波器</h1>
+<h2 id="预备知识">预备知识：</h2>
+<p>协方差：用于表示两个变量的总体误差，如果两个变化趋势一致则协方差为正值，变化趋势不一致则为负值。</p>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105058046-193529108.png" alt="" loading="lazy"></figure>
+<p>从直观上来看，协方差表示的是两个变量总体误差的期望。</p>
+<h2 id="公式讲解">公式讲解：</h2>
+<h3 id="预测状态方程">预测状态方程</h3>
+<p>由<strong>k-1时刻的最优值</strong>和<strong>系统输入</strong>计算k时刻的系统预测值。</p>
+<figure data-type="image" tabindex="2"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105113545-2096020805.png" alt="" loading="lazy"></figure>
+<h3 id="预测协方差方程">预测协方差方程</h3>
+<p>根据 <strong>k-1时刻的系统协方差</strong> 预测 <strong>k时刻系统协方差</strong>。</p>
+<figure data-type="image" tabindex="3"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105120791-1592830020.png" alt="" loading="lazy"></figure>
+<h3 id="卡尔曼增益方程">卡尔曼增益方程</h3>
+<p>根据（k时刻） <strong>协方差矩阵的预测值</strong> 计算 <strong>卡尔曼增益</strong>。</p>
+<figure data-type="image" tabindex="4"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105127314-933174930.png" alt="" loading="lazy"></figure>
+<h3 id="更新最优值方程卡尔曼滤波的输出">更新最优值方程（卡尔曼滤波的输出）</h3>
+<p>根据 <strong>状态变量的预测值</strong> 和 <strong>系统测量值</strong> 计算出 <strong>k时刻状态变量的最优值</strong>。</p>
+<figure data-type="image" tabindex="5"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105133451-1696804759.png" alt="" loading="lazy"></figure>
+<h3 id="更新协方差方程">更新协方差方程</h3>
+<p>为了求 <strong>k时刻的协方差矩阵</strong>。（为得到k+1时刻的卡尔曼输出值做准备）</p>
+<figure data-type="image" tabindex="6"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105138974-435037749.png" alt="" loading="lazy"></figure>
+<h2 id="程序实现">程序实现：</h2>
+<h3 id="参数列表">参数列表：</h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>类型</th>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>float</td>
+<td>Last_P</td>
+<td>上次估计协方差</td>
+</tr>
+<tr>
+<td>2</td>
+<td>float</td>
+<td>Now_P</td>
+<td>当前估算协方差</td>
+</tr>
+<tr>
+<td>3</td>
+<td>float</td>
+<td>out</td>
+<td>卡尔曼滤波器输出值（最优值）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>float</td>
+<td>Kg</td>
+<td>卡尔曼增益</td>
+</tr>
+<tr>
+<td>5</td>
+<td>float</td>
+<td>Q</td>
+<td>过程噪声协方差</td>
+</tr>
+<tr>
+<td>6</td>
+<td>float</td>
+<td>R</td>
+<td>观测噪声协方差</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码实现一维数据滤波">代码实现：（一维数据滤波）</h3>
+<pre><code class="language-c">//1. 结构体类型定义
+typedef struct 
+{
+    float Last_P;//上次估算协方差 初始化值为0.02
+    float Now_P;//当前估算协方差 初始化值为0
+    float out;//卡尔曼滤波器输出 初始化值为0
+    float Kg;//卡尔曼增益 初始化值为0
+    float Q;//过程噪声协方差 初始化值为0.001
+    float R;//观测噪声协方差 初始化值为0.543
+}KFP；//Kalman Filter parameter
+
+//2. 以高度为例 定义卡尔曼结构体并初始化参数
+KFP KFP_height={0.02,0,0,0,0.001,0.543};
+
+/**
+ *卡尔曼滤波器
+ *@param KFP *kfp 卡尔曼结构体参数
+ *   float input 需要滤波的参数的测量值（即传感器的采集值）
+ *@return 滤波后的参数（最优值）
+ */
+ float kalmanFilter(KFP *kfp,float input)
+ {
+     //预测协方差方程：k时刻系统估算协方差 = k-1时刻的系统协方差 + 过程噪声协方差
+     kfp-&gt;Now_P = kfp-&gt;Last_P + kfp-&gt;Q;
+     
+     //卡尔曼增益方程：卡尔曼增益 = k时刻系统估算协方差 / （k时刻系统估算协方差 + 观测噪声协方差）
+     kfp-&gt;Kg = kfp-&gt;Now_P / (kfp-&gt;NOw_P + kfp-&gt;R);
+     
+     //更新最优值方程：k时刻状态变量的最优值 = 状态变量的预测值 + 卡尔曼增益 * （测量值 - 状态变量的预测值）
+     kfp-&gt;out = kfp-&gt;out + kfp-&gt;Kg * (input -kfp-&gt;out);//因为这一次的预测值就是上一次的输出值
+     
+     //更新协方差方程: 本次的系统协方差付给 kfp-&gt;Last_P 为下一次运算准备。
+     kfp-&gt;Last_P = (1-kfp-&gt;Kg) * kfp-&gt;Now_P;
+     
+     return kfp-&gt;out；
+ }
+
+/**
+ *调用卡尔曼滤波器 实践
+ */
+int height;
+int kalman_height=0;
+kalman_height = kalmanFilter(&amp;KFP_height,(float)height);
+</code></pre>
+<p>注：本文参考于https://blog.csdn.net/CSDN_X_W/article/details/90289021?ops_request_misc=%257B%2522request%255Fid%25</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://siliyuan6.github.io/post/chuan-kou-chu-shi-hua-usart1_init/">
+                  <h3 class="post-title">
+                    串口初始化USART1_Init()
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

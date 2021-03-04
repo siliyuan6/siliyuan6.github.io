@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>hexo+github搭建个人博客 | SLYUAN</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://siliyuan6.github.io/favicon.ico?v=1614840602444">
+<link rel="stylesheet" href="https://siliyuan6.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+
+安装 node.js
+从官网下载对应的版本安装
+下载地址：node.js下载
+在命令行中用下面命令来测试是否安装成功
+node -v
+
+
+
+安装 git
+安装完后右键会出现 Git Bash Here
+
+
+使用 github
+打开刚刚安..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://siliyuan6.github.io">
+        <img src="https://siliyuan6.github.io/images/avatar.png?v=1614840602444" class="site-logo">
+        <h1 class="site-title">SLYUAN</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/siliyuan6" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/yuan-yuan-91-56-15" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      "十年饮冰，难凉热血"
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://siliyuan6.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">hexo+github搭建个人博客</h2>
+            <div class="post-date">2021-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <ul>
+<li>
+<h3 id="安装-nodejs">安装 node.js</h3>
+<p>从官网下载对应的版本安装</p>
+<p>下载地址：<a href="https://nodejs.org/zh-cn/">node.js下载</a></p>
+<p>在命令行中用下面命令来测试是否安装成功</p>
+<pre><code>node -v
+</code></pre>
+</li>
+<li>
+<h3 id="安装-git">安装 git</h3>
+<p>安装完后右键会出现 Git Bash Here</p>
+</li>
+<li>
+<h3 id="使用-github">使用 github</h3>
+<p>打开刚刚安装好的git(即打开Git CMD)，输入命令：</p>
+<pre><code>cd ~/.ssh
+</code></pre>
+<p>产生新的SSH Key，输入命令：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail@xxx.com&quot;
+</code></pre>
+<p>输入那你自己的邮箱地址，中间的提示直接回车就行，成功后就会在C:\Users\liyuan.ssh文件夹中出现两个文件id_rsa和id_rsa.pub。</p>
+<p>回到GitHub官网，点击你的头像，选择 Settings-&gt; SSH keys-&gt;New SSH key。</p>
+<p>复制 <code>id_rsa.pub</code> 中的内容到github中。</p>
+</li>
+<li>
+<h3 id="开始安装hexo">开始安装Hexo</h3>
+<p>在本地新建一个文件夹方便管理，这里新建一个blog文件夹。右键，选择 Git Bash Here 。</p>
+<p>输入命令安装hexo：</p>
+<pre><code>npm install -g hexo
+</code></pre>
+<p>初始化hexo：</p>
+<pre><code>hexo init hexo
+</code></pre>
+<p>初始化成功会显示 Start blogging with Hexo! ，这时在刚刚创建的blog文件夹中会多出来一个hexo文件夹。</p>
+<p>进入到 hexo 目录，输入指令npm install，安装相关的依赖文件以及部署形成文件。</p>
+<pre><code>cd hexo
+npm install
+hexo generate 此命令可简写成 hexo g
+</code></pre>
+<p>此时，hexo已经安装完毕了。下面使用server来验证是否安装成功。输入命令：</p>
+<pre><code>hexo server  此命令可简写成  hexo s
+</code></pre>
+<p>这时提示Hexo is running at http://loalhost:4000/.<br>
+接着我们打开浏览器，输入http://localhost:4000/ 便可看到默认的博客。</p>
+<p>在命令行里按 Ctrl+c 退出server。</p>
+</li>
+<li>
+<h3 id="配置github-pages">配置Github pages</h3>
+<p>登录Github，点击”New repository”，新建一个版本库</p>
+<p>输入仓库名：输入仓库名：你的Github名称.github.io。然后点击 Create repository。</p>
+<h6 id="注意一定要勾选上initialize-this-repository-with-a-readme">注意：一定要勾选上Initialize this repository with a README</h6>
+<h6 id="注意一定要用自己的github的用户名不然显示不出来"><strong>注意</strong>：一定要用自己的github的用户名，不然显示不出来。</h6>
+<p>然后就是启用 gitHubPages<br>
+点击右边的 Setting 菜单进入设置，找到GitHub Pages,就会显示你的博客地址。一般是：http://你的用户名.github.io</p>
+</li>
+<li>
+<h3 id="将本地hexo博客托管到github上">将本地hexo博客托管到GitHub上</h3>
+<p>输入命令，安装 hexo-deployer-git 插件</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>
+<p>然后部署博客到github上</p>
+<pre><code>hexo clean 
+hexo generator   #简写 hexo g 
+hexo deploy      #简写 hexo d
+</code></pre>
+<p>如果你的部署不成功那就先把hexo文件夹里的.deploy_git文件夹删除再重新部署，输入上面三条指令。以上部署代码都在hexo文件夹右键打开git bash here的命令行输入。</p>
+</li>
+</ul>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://siliyuan6.github.io/post/shou-xie-shu-zi-shi-bie-tensorflow/">
+                  <h3 class="post-title">
+                    手写数字识别TensorFlow
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

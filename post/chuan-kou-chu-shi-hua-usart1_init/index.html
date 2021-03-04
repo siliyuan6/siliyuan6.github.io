@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>串口初始化USART1_Init() | SLYUAN</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://siliyuan6.github.io/favicon.ico?v=1614840602444">
+<link rel="stylesheet" href="https://siliyuan6.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="串口初始化USART1_Init();
+//USART1_Init();			/* 串口初始化，用于调试 */
+
+void USART1_Init(void)
+{
+    //定义配置结构体
+	GPIO_InitTypeDef	GPIO_I..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://siliyuan6.github.io">
+        <img src="https://siliyuan6.github.io/images/avatar.png?v=1614840602444" class="site-logo">
+        <h1 class="site-title">SLYUAN</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/siliyuan6" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/yuan-yuan-91-56-15" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      "十年饮冰，难凉热血"
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://siliyuan6.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">串口初始化USART1_Init()</h2>
+            <div class="post-date">2021-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <h3 id="串口初始化usart1_init">串口初始化USART1_Init();</h3>
+<pre><code class="language-c">//USART1_Init();			/* 串口初始化，用于调试 */
+
+void USART1_Init(void)
+{
+    //定义配置结构体
+	GPIO_InitTypeDef	GPIO_InitStructure;
+	USART_InitTypeDef	USART_InitStructure;
+	NVIC_InitTypeDef	NVIC_InitStructure;
+
+    //时钟源启动
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1 | RCC_APB2Periph_GPIOA, ENABLE);
+
+    //PA9配置
+	GPIO_InitStructure.GPIO_Pin	= GPIO_Pin_9;
+	GPIO_InitStructure.GPIO_Mode	= GPIO_Mode_AF_PP;
+	GPIO_InitStructure.GPIO_Speed	= GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
+	//PA10配置，用了PA9的GPIO_InitStructure通用数据
+	GPIO_InitStructure.GPIO_Pin	= GPIO_Pin_10;
+	GPIO_InitStructure.GPIO_Mode	= GPIO_Mode_IN_FLOATING;
+	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
+
+	USART_InitStructure.USART_BaudRate		= 115200;//波特率
+	USART_InitStructure.USART_WordLength	= USART_WordLength_8b;//数据位8
+	USART_InitStructure.USART_StopBits		= USART_StopBits_1;//停止位1
+	USART_InitStructure.USART_Parity		= USART_Parity_No;//校验位无
+	USART_InitStructure.USART_HardwareFlowControl	= USART_HardwareFlowControl_None;//流控制无
+	USART_InitStructure.USART_Mode			= USART_Mode_Rx | USART_Mode_Tx;//串口模式
+	USART_Init(USART1, &amp;USART_InitStructure);//串口初始化
+	USART_Cmd(USART1, ENABLE);//串口使能
+	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);//串口中断使能
+
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);//中断优先级组配置
+	NVIC_InitStructure.NVIC_IRQChannel			= USART1_IRQn;//中断请求通道选择
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority		= 0; //抢占优先级
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority	= 10;//相应优先级
+	NVIC_InitStructure.NVIC_IRQChannelCmd			= ENABLE;//中断请求通道使能
+	NVIC_Init(&amp;NVIC_InitStructure);//中断初始化
+	
+	USART1-&gt;SR;//读取SR寄存器
+}
+</code></pre>
+<p>SR串口状态寄存器：</p>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/2067467/202103/2067467-20210301105601281-594166241.png" alt="" loading="lazy"></figure>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://siliyuan6.github.io/post/systick-chu-shi-hua-fen-xi/">
+                  <h3 class="post-title">
+                    SysTick初始化分析
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

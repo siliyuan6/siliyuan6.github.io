@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://siliyuan6.github.io</id>
     <title>SLYUAN</title>
-    <updated>2021-03-04T06:44:12.815Z</updated>
+    <updated>2021-03-04T06:50:05.714Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://siliyuan6.github.io"/>
     <link rel="self" href="https://siliyuan6.github.io/atom.xml"/>
@@ -11,80 +11,1494 @@
     <icon>https://siliyuan6.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, SLYUAN</rights>
     <entry>
-        <title type="html"><![CDATA[IntelliJ IDEA新建maven的spring项目]]></title>
-        <id>https://siliyuan6.github.io/post/intellij-idea-xin-jian-maven-de-spring-xiang-mu/</id>
-        <link href="https://siliyuan6.github.io/post/intellij-idea-xin-jian-maven-de-spring-xiang-mu/">
+        <title type="html"><![CDATA[Period和Prescaler转载]]></title>
+        <id>https://siliyuan6.github.io/post/period-he-prescaler-zhuan-zai/</id>
+        <link href="https://siliyuan6.github.io/post/period-he-prescaler-zhuan-zai/">
         </link>
-        <updated>2021-03-04T05:50:30.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="intellij-idea新建maven的spring项目">IntelliJ IDEA新建maven的spring项目</h3>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/03/04/G6FAsNoDijtz4Rq.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/03/04/Bj97NrIVgdDL8kW.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/03/04/TIy69gQDmlkCGjr.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/03/04/6YosO5zy1nTgGWZ.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/03/04/Vj5ygYupinrAUl7.png" alt="" loading="lazy"></figure>
-<p>pom.xml添加如下代码：</p>
-<pre><code class="language-xml">    &lt;dependency&gt;
-      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
-      &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
-      &lt;version&gt;4.3.13.RELEASE&lt;/version&gt;
-    &lt;/dependency&gt;
-</code></pre>
-<p>Bean.xml文件代码：</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+        <updated>2021-03-04T06:49:57.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/DvXy5T"><img src="https://s3.ax1x.com/2020/12/07/DvXy5T.png" alt="DvXy5T.png" loading="lazy"></a></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[win10任务栏图标设置“不合并标签但隐藏文字”]]></title>
+        <id>https://siliyuan6.github.io/post/win10-ren-wu-lan-tu-biao-she-zhi-bu-he-bing-biao-qian-dan-yin-cang-wen-zi/</id>
+        <link href="https://siliyuan6.github.io/post/win10-ren-wu-lan-tu-biao-she-zhi-bu-he-bing-biao-qian-dan-yin-cang-wen-zi/">
+        </link>
+        <updated>2021-03-04T06:49:40.000Z</updated>
+        <content type="html"><![CDATA[<p>设置如图不分组即可，下载链接 https://files-cdn.cnblogs.com/files/slyuan/7tt_setup.rar<br>
+<img src="https://img2020.cnblogs.com/blog/2067467/202012/2067467-20201223120231983-9326979.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Github页面图片加载失败]]></title>
+        <id>https://siliyuan6.github.io/post/github-ye-mian-tu-pian-jia-zai-shi-bai/</id>
+        <link href="https://siliyuan6.github.io/post/github-ye-mian-tu-pian-jia-zai-shi-bai/">
+        </link>
+        <updated>2021-03-04T06:49:14.000Z</updated>
+        <content type="html"><![CDATA[<p>Window系统下</p>
+<p>还可以使用ipconfig/flush对本地DNS缓存进行一次刷新，如果遇到网络异常，可能是DNS缓存的问题，刷新一下，步骤。</p>
+<p>windows开始→运行→输入：CMD 按回车键，打开命令提示符窗口。<br>
+再输入： ipconfig /flushdns 回车，执行命令，可以重建本地DNS缓存。</p>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/2067467/202012/2067467-20201231152804188-715734985.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[卡尔曼滤波器]]></title>
+        <id>https://siliyuan6.github.io/post/qia-er-man-lu-bo-qi/</id>
+        <link href="https://siliyuan6.github.io/post/qia-er-man-lu-bo-qi/">
+        </link>
+        <updated>2021-03-04T06:48:43.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="卡尔曼滤波器">卡尔曼滤波器</h1>
+<h2 id="预备知识">预备知识：</h2>
+<p>协方差：用于表示两个变量的总体误差，如果两个变化趋势一致则协方差为正值，变化趋势不一致则为负值。</p>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105058046-193529108.png" alt="" loading="lazy"></figure>
+<p>从直观上来看，协方差表示的是两个变量总体误差的期望。</p>
+<h2 id="公式讲解">公式讲解：</h2>
+<h3 id="预测状态方程">预测状态方程</h3>
+<p>由<strong>k-1时刻的最优值</strong>和<strong>系统输入</strong>计算k时刻的系统预测值。</p>
+<figure data-type="image" tabindex="2"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105113545-2096020805.png" alt="" loading="lazy"></figure>
+<h3 id="预测协方差方程">预测协方差方程</h3>
+<p>根据 <strong>k-1时刻的系统协方差</strong> 预测 <strong>k时刻系统协方差</strong>。</p>
+<figure data-type="image" tabindex="3"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105120791-1592830020.png" alt="" loading="lazy"></figure>
+<h3 id="卡尔曼增益方程">卡尔曼增益方程</h3>
+<p>根据（k时刻） <strong>协方差矩阵的预测值</strong> 计算 <strong>卡尔曼增益</strong>。</p>
+<figure data-type="image" tabindex="4"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105127314-933174930.png" alt="" loading="lazy"></figure>
+<h3 id="更新最优值方程卡尔曼滤波的输出">更新最优值方程（卡尔曼滤波的输出）</h3>
+<p>根据 <strong>状态变量的预测值</strong> 和 <strong>系统测量值</strong> 计算出 <strong>k时刻状态变量的最优值</strong>。</p>
+<figure data-type="image" tabindex="5"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105133451-1696804759.png" alt="" loading="lazy"></figure>
+<h3 id="更新协方差方程">更新协方差方程</h3>
+<p>为了求 <strong>k时刻的协方差矩阵</strong>。（为得到k+1时刻的卡尔曼输出值做准备）</p>
+<figure data-type="image" tabindex="6"><img src="https://img2020.cnblogs.com/blog/2067467/202102/2067467-20210223105138974-435037749.png" alt="" loading="lazy"></figure>
+<h2 id="程序实现">程序实现：</h2>
+<h3 id="参数列表">参数列表：</h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>类型</th>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>float</td>
+<td>Last_P</td>
+<td>上次估计协方差</td>
+</tr>
+<tr>
+<td>2</td>
+<td>float</td>
+<td>Now_P</td>
+<td>当前估算协方差</td>
+</tr>
+<tr>
+<td>3</td>
+<td>float</td>
+<td>out</td>
+<td>卡尔曼滤波器输出值（最优值）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>float</td>
+<td>Kg</td>
+<td>卡尔曼增益</td>
+</tr>
+<tr>
+<td>5</td>
+<td>float</td>
+<td>Q</td>
+<td>过程噪声协方差</td>
+</tr>
+<tr>
+<td>6</td>
+<td>float</td>
+<td>R</td>
+<td>观测噪声协方差</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码实现一维数据滤波">代码实现：（一维数据滤波）</h3>
+<pre><code class="language-c">//1. 结构体类型定义
+typedef struct 
+{
+    float Last_P;//上次估算协方差 初始化值为0.02
+    float Now_P;//当前估算协方差 初始化值为0
+    float out;//卡尔曼滤波器输出 初始化值为0
+    float Kg;//卡尔曼增益 初始化值为0
+    float Q;//过程噪声协方差 初始化值为0.001
+    float R;//观测噪声协方差 初始化值为0.543
+}KFP；//Kalman Filter parameter
 
-    &lt;bean id=&quot;helloworld&quot; class=&quot;org.example.HelloWorld&quot;&gt;
-        &lt;property name=&quot;message&quot; value=&quot;Hello World!&quot;/&gt;
-
-    &lt;/bean&gt;
-&lt;/beans&gt;
-</code></pre>
-<p>App.java:</p>
-<pre><code class="language-java">package org.example;
+//2. 以高度为例 定义卡尔曼结构体并初始化参数
+KFP KFP_height={0.02,0,0,0,0.001,0.543};
 
 /**
- * Hello world!
- *
+ *卡尔曼滤波器
+ *@param KFP *kfp 卡尔曼结构体参数
+ *   float input 需要滤波的参数的测量值（即传感器的采集值）
+ *@return 滤波后的参数（最优值）
  */
-public class App 
+ float kalmanFilter(KFP *kfp,float input)
+ {
+     //预测协方差方程：k时刻系统估算协方差 = k-1时刻的系统协方差 + 过程噪声协方差
+     kfp-&gt;Now_P = kfp-&gt;Last_P + kfp-&gt;Q;
+     
+     //卡尔曼增益方程：卡尔曼增益 = k时刻系统估算协方差 / （k时刻系统估算协方差 + 观测噪声协方差）
+     kfp-&gt;Kg = kfp-&gt;Now_P / (kfp-&gt;NOw_P + kfp-&gt;R);
+     
+     //更新最优值方程：k时刻状态变量的最优值 = 状态变量的预测值 + 卡尔曼增益 * （测量值 - 状态变量的预测值）
+     kfp-&gt;out = kfp-&gt;out + kfp-&gt;Kg * (input -kfp-&gt;out);//因为这一次的预测值就是上一次的输出值
+     
+     //更新协方差方程: 本次的系统协方差付给 kfp-&gt;Last_P 为下一次运算准备。
+     kfp-&gt;Last_P = (1-kfp-&gt;Kg) * kfp-&gt;Now_P;
+     
+     return kfp-&gt;out；
+ }
+
+/**
+ *调用卡尔曼滤波器 实践
+ */
+int height;
+int kalman_height=0;
+kalman_height = kalmanFilter(&amp;KFP_height,(float)height);
+</code></pre>
+<p>注：本文参考于https://blog.csdn.net/CSDN_X_W/article/details/90289021?ops_request_misc=%257B%2522request%255Fid%25</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[串口初始化USART1_Init()]]></title>
+        <id>https://siliyuan6.github.io/post/chuan-kou-chu-shi-hua-usart1_init/</id>
+        <link href="https://siliyuan6.github.io/post/chuan-kou-chu-shi-hua-usart1_init/">
+        </link>
+        <updated>2021-03-04T06:47:59.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="串口初始化usart1_init">串口初始化USART1_Init();</h3>
+<pre><code class="language-c">//USART1_Init();			/* 串口初始化，用于调试 */
+
+void USART1_Init(void)
 {
-    public static void main( String[] args )
-    {
-        System.out.println( &quot;Hello World!&quot; );
-    }
+    //定义配置结构体
+	GPIO_InitTypeDef	GPIO_InitStructure;
+	USART_InitTypeDef	USART_InitStructure;
+	NVIC_InitTypeDef	NVIC_InitStructure;
+
+    //时钟源启动
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1 | RCC_APB2Periph_GPIOA, ENABLE);
+
+    //PA9配置
+	GPIO_InitStructure.GPIO_Pin	= GPIO_Pin_9;
+	GPIO_InitStructure.GPIO_Mode	= GPIO_Mode_AF_PP;
+	GPIO_InitStructure.GPIO_Speed	= GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
+	//PA10配置，用了PA9的GPIO_InitStructure通用数据
+	GPIO_InitStructure.GPIO_Pin	= GPIO_Pin_10;
+	GPIO_InitStructure.GPIO_Mode	= GPIO_Mode_IN_FLOATING;
+	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
+
+	USART_InitStructure.USART_BaudRate		= 115200;//波特率
+	USART_InitStructure.USART_WordLength	= USART_WordLength_8b;//数据位8
+	USART_InitStructure.USART_StopBits		= USART_StopBits_1;//停止位1
+	USART_InitStructure.USART_Parity		= USART_Parity_No;//校验位无
+	USART_InitStructure.USART_HardwareFlowControl	= USART_HardwareFlowControl_None;//流控制无
+	USART_InitStructure.USART_Mode			= USART_Mode_Rx | USART_Mode_Tx;//串口模式
+	USART_Init(USART1, &amp;USART_InitStructure);//串口初始化
+	USART_Cmd(USART1, ENABLE);//串口使能
+	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);//串口中断使能
+
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);//中断优先级组配置
+	NVIC_InitStructure.NVIC_IRQChannel			= USART1_IRQn;//中断请求通道选择
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority		= 0; //抢占优先级
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority	= 10;//相应优先级
+	NVIC_InitStructure.NVIC_IRQChannelCmd			= ENABLE;//中断请求通道使能
+	NVIC_Init(&amp;NVIC_InitStructure);//中断初始化
+	
+	USART1-&gt;SR;//读取SR寄存器
+}
+</code></pre>
+<p>SR串口状态寄存器：</p>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/2067467/202103/2067467-20210301105601281-594166241.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SysTick初始化分析]]></title>
+        <id>https://siliyuan6.github.io/post/systick-chu-shi-hua-fen-xi/</id>
+        <link href="https://siliyuan6.github.io/post/systick-chu-shi-hua-fen-xi/">
+        </link>
+        <updated>2021-03-04T06:47:37.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="systick初始化分析">SysTick初始化分析</h3>
+<pre><code class="language-c">//SysTick_Init();			/* SysTick初始化，配置为系统时钟 */
+
+
+//运行系统时钟初始化函数：
+void SysTick_Init(void)
+{
+	if(SysTick_Config(SystemCoreClock / SYS_DIV) )//SysTick_Config系统时钟配置函数运行，计算=（系统时钟 / 分频系数）
+	{
+		while(1)
+		{
+			;
+		}
+	}
+}
+
+
+//SysTick_Config系统时钟配置函数，位置：core_cm3.h
+static __INLINE uint32_t SysTick_Config(uint32_t ticks)
+{ 
+  if (ticks &gt; SysTick_LOAD_RELOAD_Msk)  return (1);            /* Reload value impossible */
+                                                               
+  SysTick-&gt;LOAD  = (ticks &amp; SysTick_LOAD_RELOAD_Msk) - 1;      /* set reload register */
+  NVIC_SetPriority (SysTick_IRQn, (1&lt;&lt;__NVIC_PRIO_BITS) - 1);  /* set Priority for Cortex-M0 System Interrupts */
+  SysTick-&gt;VAL   = 0;                                          /* Load the SysTick Counter Value */
+  SysTick-&gt;CTRL  = SysTick_CTRL_CLKSOURCE_Msk | 
+                   SysTick_CTRL_TICKINT_Msk   | 
+                   SysTick_CTRL_ENABLE_Msk;                    /* Enable SysTick IRQ and SysTick Timer */
+  return (0);                                                  /* Function successful */
+}
+
+
+//SystemCoreClock参数位置，SystemCoreClock（system_stm32f10x.c）
+#ifdef SYSCLK_FREQ_HSE
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_HSE;        /*!&lt; System Clock Frequency (Core Clock) */
+#elif defined SYSCLK_FREQ_24MHz
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_24MHz;        /*!&lt; System Clock Frequency (Core Clock) */
+#elif defined SYSCLK_FREQ_36MHz
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_36MHz;        /*!&lt; System Clock Frequency (Core Clock) */
+#elif defined SYSCLK_FREQ_48MHz
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_48MHz;        /*!&lt; System Clock Frequency (Core Clock) */
+#elif defined SYSCLK_FREQ_56MHz
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_56MHz;        /*!&lt; System Clock Frequency (Core Clock) */
+#elif defined SYSCLK_FREQ_72MHz
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_72MHz;        /*!&lt; System Clock Frequency (Core Clock) */
+#else /*!&lt; HSI Selected as System Clock source */
+  uint32_t SystemCoreClock         = HSI_VALUE;        /*!&lt; System Clock Frequency (Core Clock) */
+#endif
+
+
+//SYS_DIV参数位置，（myInclude.h）
+#define SYS_PERIOD	10 /* us */
+#define SYS_DIV		(uint32_t)(1000000 / SYS_PERIOD)
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[hexo+github搭建个人博客]]></title>
+        <id>https://siliyuan6.github.io/post/hexogithub-da-jian-ge-ren-bo-ke/</id>
+        <link href="https://siliyuan6.github.io/post/hexogithub-da-jian-ge-ren-bo-ke/">
+        </link>
+        <updated>2021-03-04T06:47:26.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<h3 id="安装-nodejs">安装 node.js</h3>
+<p>从官网下载对应的版本安装</p>
+<p>下载地址：<a href="https://nodejs.org/zh-cn/">node.js下载</a></p>
+<p>在命令行中用下面命令来测试是否安装成功</p>
+<pre><code>node -v
+</code></pre>
+</li>
+<li>
+<h3 id="安装-git">安装 git</h3>
+<p>安装完后右键会出现 Git Bash Here</p>
+</li>
+<li>
+<h3 id="使用-github">使用 github</h3>
+<p>打开刚刚安装好的git(即打开Git CMD)，输入命令：</p>
+<pre><code>cd ~/.ssh
+</code></pre>
+<p>产生新的SSH Key，输入命令：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail@xxx.com&quot;
+</code></pre>
+<p>输入那你自己的邮箱地址，中间的提示直接回车就行，成功后就会在C:\Users\liyuan.ssh文件夹中出现两个文件id_rsa和id_rsa.pub。</p>
+<p>回到GitHub官网，点击你的头像，选择 Settings-&gt; SSH keys-&gt;New SSH key。</p>
+<p>复制 <code>id_rsa.pub</code> 中的内容到github中。</p>
+</li>
+<li>
+<h3 id="开始安装hexo">开始安装Hexo</h3>
+<p>在本地新建一个文件夹方便管理，这里新建一个blog文件夹。右键，选择 Git Bash Here 。</p>
+<p>输入命令安装hexo：</p>
+<pre><code>npm install -g hexo
+</code></pre>
+<p>初始化hexo：</p>
+<pre><code>hexo init hexo
+</code></pre>
+<p>初始化成功会显示 Start blogging with Hexo! ，这时在刚刚创建的blog文件夹中会多出来一个hexo文件夹。</p>
+<p>进入到 hexo 目录，输入指令npm install，安装相关的依赖文件以及部署形成文件。</p>
+<pre><code>cd hexo
+npm install
+hexo generate 此命令可简写成 hexo g
+</code></pre>
+<p>此时，hexo已经安装完毕了。下面使用server来验证是否安装成功。输入命令：</p>
+<pre><code>hexo server  此命令可简写成  hexo s
+</code></pre>
+<p>这时提示Hexo is running at http://loalhost:4000/.<br>
+接着我们打开浏览器，输入http://localhost:4000/ 便可看到默认的博客。</p>
+<p>在命令行里按 Ctrl+c 退出server。</p>
+</li>
+<li>
+<h3 id="配置github-pages">配置Github pages</h3>
+<p>登录Github，点击”New repository”，新建一个版本库</p>
+<p>输入仓库名：输入仓库名：你的Github名称.github.io。然后点击 Create repository。</p>
+<h6 id="注意一定要勾选上initialize-this-repository-with-a-readme">注意：一定要勾选上Initialize this repository with a README</h6>
+<h6 id="注意一定要用自己的github的用户名不然显示不出来"><strong>注意</strong>：一定要用自己的github的用户名，不然显示不出来。</h6>
+<p>然后就是启用 gitHubPages<br>
+点击右边的 Setting 菜单进入设置，找到GitHub Pages,就会显示你的博客地址。一般是：http://你的用户名.github.io</p>
+</li>
+<li>
+<h3 id="将本地hexo博客托管到github上">将本地hexo博客托管到GitHub上</h3>
+<p>输入命令，安装 hexo-deployer-git 插件</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>
+<p>然后部署博客到github上</p>
+<pre><code>hexo clean 
+hexo generator   #简写 hexo g 
+hexo deploy      #简写 hexo d
+</code></pre>
+<p>如果你的部署不成功那就先把hexo文件夹里的.deploy_git文件夹删除再重新部署，输入上面三条指令。以上部署代码都在hexo文件夹右键打开git bash here的命令行输入。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手写数字识别TensorFlow]]></title>
+        <id>https://siliyuan6.github.io/post/shou-xie-shu-zi-shi-bie-tensorflow/</id>
+        <link href="https://siliyuan6.github.io/post/shou-xie-shu-zi-shi-bie-tensorflow/">
+        </link>
+        <updated>2021-03-04T06:47:00.000Z</updated>
+        <content type="html"><![CDATA[<p>基于TensorFlow的CNN（Convolutional Neural Network）模型通过对MNIST数据集训练，来实现手写数字识别</p>
+<p>导入TensorFlow模块</p>
+<pre><code class="language-python">import tensorflow as tf
+</code></pre>
+<p>导入imput_data用于下载和安装MNIST数据集</p>
+<pre><code class="language-python">from tensorflow.examples.tutorials.mnist import input_data
+</code></pre>
+<p>读取数据集相关内容，如果已下载好，直接写入目录</p>
+<pre><code class="language-python">mnist = input_data.read_data_sets(&quot;./MNIST_data/&quot;, one_hot=True)
+</code></pre>
+<p>创建两个占位符，x为输入网络的图像，y_为输入网络的图像类别</p>
+<pre><code class="language-python">x = tf.placeholder(&quot;float&quot;, shape=[None, 784])
+y_ = tf.placeholder(&quot;float&quot;, shape=[None, 10])
+</code></pre>
+<p>初始化权重函数</p>
+<pre><code class="language-python">def weight_variable(shape):
+#输出服从截尾正态分布的随机值，标准差为0.1
+initial = tf.truncated_normal(shape, stddev=0.1)
+return tf.Variable(initial)
+</code></pre>
+<p>初始化偏执函数</p>
+<pre><code class="language-python">def bias_variable(shape):
+#输出一个常量0.1
+initial = tf.constant(0.1, shape=shape)
+return tf.Variable(initial)
+</code></pre>
+<p>创建卷积函数</p>
+<pre><code class="language-python">def conv2d(x, W):
+#x为输入的张量，W为卷积核，padding填充（same考虑边缘，并填充为0，valid则不考虑填充）
+return tf.nn.conv2d(x, W, strides=[1,1,1,1], padding=&quot;SAME&quot;)
+</code></pre>
+<p>创建池化函数</p>
+<pre><code class="language-python">def max_pool_2x2(x):
+#ksize表示pool窗口大小为2x2,也就是高2，宽2
+#strides，表示在height和width维度上的步长都为2
+return tf.nn.max_pool(x, ksize=[1,2,2,1],strides=[1,2,2,1], padding=&quot;SAME&quot;)
+</code></pre>
+<p>开始第1层卷积（卷积核为5*5），并池化</p>
+<pre><code class="language-python">#初始化权重W为[5,5,1,32]的张量，表示卷积核大小为5*5，1表示图像通道数，6表示卷积核个数即输出6个特征图
+W_conv1 = weight_variable([5,5,1,6])
+#初始化偏执b为[6],即输出大小
+b_conv1 = bias_variable([6])
+
+#把输入x(二维张量,shape为[batch, 784])变成4d的x_image，x_image的shape应该是[batch,28,28,1]
+#-1表示自动推测这个维度的size
+#将x变成28*28*（1深度）的张量，并且自动推算个数
+x_image = tf.reshape(x, [-1,28,28,1])
+
+#把x_image和权重进行卷积，加上偏置项，然后应用ReLU激活函数tf.nn.relu（小于0输出0，大于0不变），最后进行max_pooling（最大化池化），h_pool1的输出即为第一层网络输出，池化后shape为[batch,14,14,6]
+h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
+h_pool1 = max_pool_2x2(h_conv1)
+</code></pre>
+<p>第2层卷积</p>
+<pre><code class="language-python">#卷积核大小依然是5*5，通道数为6，卷积核个数为16
+W_conv2 = weight_variable([5,5,6,16])
+b_conv2 = weight_variable([16])
+
+#h_pool2即为第二层网络输出，shape为[batch,7,7,16]
+#卷积
+h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
+#2*2池化
+h_pool2 = max_pool_2x2(h_conv2)
+</code></pre>
+<p>第3层, 全连接层</p>
+<pre><code class="language-python">#这层是拥有1024个神经元的全连接层
+#W的第1维size为7*7*16，7*7是h_pool2输出的size，16是第2层输出神经元个数
+W_fc1 = weight_variable([7*7*16, 120])
+b_fc1 = bias_variable([120])
+
+#计算前需要把第2层的输出reshape成[batch, 7*7*16]的张量
+#tf.matmul矩阵相乘 
+#tf.nn.relu将大于0的保持不变，小于0的数置为0。
+h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*16])
+h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
+</code></pre>
+<p>Dropout层</p>
+<pre><code class="language-python">#为了减少过拟合，在输出层前加入dropout
+#防止或减轻过拟合（为了得到一致假设而使假设变得过度严格）而使用的函数
+keep_prob = tf.placeholder(&quot;float&quot;)
+h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
+</code></pre>
+<p>输出层,第二个全连接层</p>
+<pre><code class="language-python">#添加一个softmax层，使用softmax将网络输出值换成了概率
+W_fc2 = weight_variable([120, 10])
+b_fc2 = bias_variable([10])
+
+y_conv = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
+</code></pre>
+<p>预测值和真实值之间的交叉墒</p>
+<pre><code class="language-python">#tf.log计数自然对数 
+#tf.reduce_sum求沿着某一维度的和
+cross_entropy = -tf.reduce_sum(y_ * tf.log(y_conv))
+</code></pre>
+<p>使用ADAM优化器来做梯度下降。学习率为0.0001</p>
+<pre><code class="language-python">train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+</code></pre>
+<p>评估模型</p>
+<pre><code class="language-python">#tf.argmax 按照后面值，axis=0时比较每一列的元素，将每一列最大元素所在的索引记录下来，最后输出每一列最大元素所在的索引数组。axis=1时比较每一行的元素。
+#tf.equal 判断两个值是否相等，即判断预测与正确值是否相等
+correct_predict = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))
+</code></pre>
+<p>计算正确率</p>
+<pre><code class="language-python">#因为tf.equal返回的是布尔值，使用tf.cast把布尔值转换成浮点数
+#然后用tf.reduce_mean求平均值
+accuracy = tf.reduce_mean(tf.cast(correct_predict, &quot;float&quot;))
+</code></pre>
+<p>实例化一个saver对象</p>
+<pre><code class="language-python">#tf.train.Saver() 保存和加载模型
+saver = tf.train.Saver()
+</code></pre>
+<p>开始训练函数</p>
+<pre><code class="language-python">def cnn_train():
+# 创建一个交互式Session
+sess = tf.InteractiveSession()
+#tf.initialize_all_variables()初始化变量
+sess.run(tf.initialize_all_variables())
+#循环20000次
+for i in range(20000):
+batch = mnist.train.next_batch(50)
+if i%100 == 0:
+#每100次输出一次日志
+train_accuracy = accuracy.eval(feed_dict={
+x:batch[0], y_:batch[1], keep_prob:1.0})
+print (&quot;step %d, training accuracy %g&quot; % (i, train_accuracy))
+#保存模型
+saver.save(sess, './model')
+train_step.run(feed_dict={x:batch[0], y_:batch[1], keep_prob:0.5})
+</code></pre>
+<p>预测函数</p>
+<pre><code class="language-python">def predict():
+sess = tf.InteractiveSession()
+sess.run(tf.global_variables_initializer())
+saver = tf.train.Saver(tf.global_variables())
+saver.restore(sess, 'model')
+print( &quot;test accuracy %g&quot; % accuracy.eval(feed_dict={
+x:mnist.test.images, y_:mnist.test.labels, keep_prob:1.0}))
+</code></pre>
+<p>调用主函数</p>
+<pre><code class="language-python">cnn_train()
+predict()
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[stm32与mpu6050通讯]]></title>
+        <id>https://siliyuan6.github.io/post/stm32-yu-mpu6050-tong-xun/</id>
+        <link href="https://siliyuan6.github.io/post/stm32-yu-mpu6050-tong-xun/">
+        </link>
+        <updated>2021-03-04T06:46:34.000Z</updated>
+        <content type="html"><![CDATA[<p>摘要：本例子是采用stm32f103rbt6和mpu6050的通讯实验，mpu6050是直接淘宝上买的GY-521模块。</p>
+<p>本例子是库函数版本。</p>
+<p>结构：</p>
+<p>​	调用ISys.c里的MPU6050_Configuration();函数来初始化以下所有，包含iic和mpu6050。</p>
+<p>​	mpu6050.c		初始化mpu6050的各个参数，并且给出输出加速度和陀螺仪数据的函数</p>
+<p>​	iic_analog.c		iic的模拟，初始化iic</p>
+<p>​	mpuiic.c				iic所用引脚的gpio初始化，以及各种操作函数</p>
+<p>​	Kalman_Filter.c	卡尔曼滤波器</p>
+<p>​	ISys.c					调用以上各个函数完成初始化</p>
+<p>代码如下：</p>
+<p>mpu6050.h</p>
+<pre><code class="language-C">#ifndef _MPU6050_h_
+#define _MPU6050_h_
+
+#define	SMPLRT_DIV		0x19	//陀螺仪采样率，典型值：0x07(125Hz)
+#define	CONFIG			  0x1A	//低通滤波频率，典型值：0x06(5Hz)
+#define	GYRO_CONFIG		0x1B	//陀螺仪自检及测量范围，典型值：0x18(不自检，2000deg/s)
+#define	ACCEL_CONFIG	0x1C	//加速计自检、测量范围及高通滤波频率，典型值：0x01(不自检，2G，5Hz)
+#define	ACCEL_XOUT_H	0x3B	
+#define	ACCEL_XOUT_L	0x3C
+#define	ACCEL_YOUT_H	0x3D
+#define	ACCEL_YOUT_L	0x3E
+#define	ACCEL_ZOUT_H	0x3F
+#define	ACCEL_ZOUT_L	0x40
+#define	TEMP_OUT_H		0x41
+#define	TEMP_OUT_L		0x42
+#define	GYRO_XOUT_H		0x43
+#define	GYRO_XOUT_L		0x44	
+#define	GYRO_YOUT_H		0x45
+#define	GYRO_YOUT_L		0x46
+#define	GYRO_ZOUT_H		0x47
+#define	GYRO_ZOUT_L		0x48
+#define	PWR_MGMT_1		0x6B	//电源管理，典型值：0x00(正常启用)
+#define	WHO_AM_I		  0x75	//IIC地址寄存器(默认数值0x68，只读)
+#define	SLAVEADRESS		0xD0	//IIC写入时的地址字节数据，+1为读取
+
+//初始化MPU6050
+extern void MPU6050_Inital(void);
+
+
+//获取加速度计的值
+extern short getAccX(void);
+extern short getAccY(void);
+extern short getAccZ(void);
+
+//获取陀螺仪的值
+extern short getGyroX(void);
+extern short getGyroY(void);
+extern short getGyroZ(void);
+
+//获取温度
+extern short getTemperature(void);
+
+#endif
+
+
+</code></pre>
+<p>mpu6050.c</p>
+<pre><code class="language-c">#include &quot;stm32f10x.h&quot;
+#include &quot;MPU6050.h&quot;
+#include &quot;iic_analog.h&quot;
+#include &quot;delay.h&quot;
+
+void delay_IIC( int ms );
+
+void MPU6050_Inital(void)
+{
+	delay_IIC( 100 );
+	
+	Single_Write_IIC( SLAVEADRESS , PWR_MGMT_1 , 0x00 );        //解除休眠
+	delay_ms(1000);                                             //延时，保证初始化成功
+  Single_Write_IIC( SLAVEADRESS , PWR_MGMT_1 , 0x03 );        //选时钟
+	Single_Write_IIC( SLAVEADRESS , SMPLRT_DIV , 0x00 );        //陀螺仪采样率，1khz貌似不错
+	Single_Write_IIC( SLAVEADRESS , CONFIG , 0x03 );            //加速度44hz滤波，陀螺仪42hz滤波
+	Single_Write_IIC( SLAVEADRESS , GYRO_CONFIG , 0x18 );       //陀螺仪最大量程-+2000度每秒   灵敏度：16.4 LSB/(o/s)
+	Single_Write_IIC( SLAVEADRESS , ACCEL_CONFIG , 0x08 );      //加速度最大量程-+4g           灵敏度: 8192 LSB/g
+	delay_IIC( 100 );
+}
+
+
+short getAccX(void)
+{
+	short AccX = 0;
+	char AccXH = 0, AccXL = 0;
+
+	AccXH = Single_Read_IIC( SLAVEADRESS , ACCEL_XOUT_H );
+	AccXL = Single_Read_IIC( SLAVEADRESS , ACCEL_XOUT_L );
+
+	AccX = (AccXH&lt;&lt;8)|AccXL;
+
+	return AccX;
+}
+
+short getAccY(void)
+{
+	short AccY = 0;
+	char AccYH = 0 , AccYL = 0;
+
+	AccYH = Single_Read_IIC( SLAVEADRESS , ACCEL_YOUT_H );
+	AccYL = Single_Read_IIC( SLAVEADRESS , ACCEL_YOUT_L );
+
+	AccY = (AccYH&lt;&lt;8)|AccYL;
+
+	return AccY;
+}
+
+short getAccZ(void)
+{
+	short AccZ = 0;
+	char AccZH = 0 , AccZL = 0;
+
+	AccZH = Single_Read_IIC( SLAVEADRESS , ACCEL_ZOUT_H );
+	AccZL = Single_Read_IIC( SLAVEADRESS , ACCEL_ZOUT_L );
+
+	AccZ = (AccZH&lt;&lt;8)|AccZL;
+
+	return AccZ;
+}
+
+short getGyroX(void)
+{
+	short GyroX = 0;
+	char GyroXH = 0 , GyroXL = 0; 
+	
+	GyroXH = Single_Read_IIC( SLAVEADRESS , GYRO_XOUT_H );
+	GyroXL = Single_Read_IIC( SLAVEADRESS , GYRO_XOUT_H );
+	
+	GyroX = (GyroXH&lt;&lt;8)|GyroXL;
+	
+	return GyroX;	
+}
+
+short getGyroY(void)
+{
+   	short GyroY = 0;
+	char GyroYH = 0 , GyroYL = 0; 
+	
+	GyroYH = Single_Read_IIC( SLAVEADRESS , GYRO_YOUT_H );
+	GyroYL = Single_Read_IIC( SLAVEADRESS , GYRO_YOUT_H );
+	
+	GyroY = (GyroYH&lt;&lt;8)|GyroYL;
+	
+	return GyroY;	
+}
+
+short getGyroZ(void)
+{
+   	short GyroZ = 0;
+	char GyroZH = 0 , GyroZL = 0; 
+	
+	GyroZH = Single_Read_IIC( SLAVEADRESS , GYRO_ZOUT_H );
+	GyroZL = Single_Read_IIC( SLAVEADRESS , GYRO_ZOUT_H );
+	
+	GyroZ = (GyroZH&lt;&lt;8)|GyroZL;
+	
+	return GyroZ;	
+}
+
+short getTemperature(void)
+{
+ 	short temperature = 0;
+	char temperatureH = 0 , temperatureL = 0;
+
+	temperatureH = Single_Read_IIC( SLAVEADRESS , TEMP_OUT_H );
+	temperatureL = Single_Read_IIC( SLAVEADRESS , TEMP_OUT_L );
+
+	temperature = (temperatureH&lt;&lt;8)|temperatureL;
+
+	return temperature;
+}
+
+
+void delay_IIC( int ms )
+{
+	int i,j;
+	for( i = 0 ; i &lt; ms ; i++ )
+	{
+		for( j = 0 ; j &lt; 30000 ; j++ );
+	}
 }
 
 </code></pre>
-<p>HelloWorld.java:</p>
-<pre><code class="language-java">package org.example;
+<p>因使用IIC通讯，所以要初始化IIC。</p>
+<p>mpuiic.h</p>
+<pre><code class="language-C">#ifndef __MPUIIC_H
+#define __MPUIIC_H
+#include &quot;sys.h&quot;
 
-public class HelloWorld {
-    private String message;
-    public void setMessage(String message) {
-        this.message = message;
-    }
-    public void getMessage() {
-        System.out.println(&quot;Your Message：&quot; + message);
-    }
+//IO方向设置
+#define MPU_SDA_IN()  {GPIOB-&gt;CRH&amp;=0XFFFF0FFF;GPIOB-&gt;CRH|=8&lt;&lt;12;}
+#define MPU_SDA_OUT() {GPIOB-&gt;CRH&amp;=0XFFFF0FFF;GPIOB-&gt;CRH|=3&lt;&lt;12;}
+
+//IO操作函数	 
+#define MPU_IIC_SCL    PBout(10) 		//SCL
+#define MPU_IIC_SDA    PBout(11) 		//SDA	 
+#define MPU_READ_SDA   PBin(11) 		//输入SDA 
+
+//IIC所有操作函数
+void MPU_IIC_Delay(void);				//MPU IIC延时函数
+void MPU_IIC_Init(void);                //初始化IIC的IO口				 
+void MPU_IIC_Start(void);				//发送IIC开始信号
+void MPU_IIC_Stop(void);	  			//发送IIC停止信号
+void MPU_IIC_Send_Byte(u8 txd);			//IIC发送一个字节
+u8 MPU_IIC_Read_Byte(unsigned char ack);//IIC读取一个字节
+u8 MPU_IIC_Wait_Ack(void); 				//IIC等待ACK信号
+void MPU_IIC_Ack(void);					//IIC发送ACK信号
+void MPU_IIC_NAck(void);				//IIC不发送ACK信号
+
+void IMPU_IC_Write_One_Byte(u8 daddr,u8 addr,u8 data);
+u8 MPU_IIC_Read_One_Byte(u8 daddr,u8 addr);	  
+#endif
+
+</code></pre>
+<p>mpuiic.c</p>
+<pre><code class="language-C">#include &quot;mpuiic.h&quot;
+#include &quot;delay.h&quot;
+
+ //MPU IIC 延时函数
+void MPU_IIC_Delay(void)
+{
+	delay_us(2);
+}
+
+//初始化IIC
+void MPU_IIC_Init(void)
+{					     
+  GPIO_InitTypeDef  GPIO_InitStructure;
+	
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);//先使能外设IO PORTB时钟 
+		
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10|GPIO_Pin_11;	 // 端口配置
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 		 //推挽输出
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		 //IO口速度为50MHz
+  GPIO_Init(GPIOB, &amp;GPIO_InitStructure);					 //根据设定参数初始化GPIO 
+	
+  GPIO_SetBits(GPIOB,GPIO_Pin_10|GPIO_Pin_11);					//PB10,PB11 输出高	
+ 
+}
+//产生IIC起始信号
+void MPU_IIC_Start(void)
+{
+	MPU_SDA_OUT();//sda线输出
+	MPU_IIC_SDA=1;	  	  
+	MPU_IIC_SCL=1;
+	MPU_IIC_Delay();
+ 	MPU_IIC_SDA=0;//START:when CLK is high,DATA change form high to low 
+	MPU_IIC_Delay();
+	MPU_IIC_SCL=0;//钳住I2C总线，准备发送或接收数据 
+}	  
+//产生IIC停止信号
+void MPU_IIC_Stop(void)
+{
+	MPU_SDA_OUT();//sda线输出
+	MPU_IIC_SCL=0;
+	MPU_IIC_SDA=0;//STOP:when CLK is high DATA change form low to high
+ 	MPU_IIC_Delay();
+	MPU_IIC_SCL=1; 
+	MPU_IIC_SDA=1;//发送I2C总线结束信号
+	MPU_IIC_Delay();							   	
+}
+//等待应答信号到来
+//返回值：1，接收应答失败
+//       0，接收应答成功
+u8 MPU_IIC_Wait_Ack(void)
+{
+	u8 ucErrTime=0;
+	MPU_SDA_IN();      //SDA设置为输入  
+	MPU_IIC_SDA=1;MPU_IIC_Delay();	   
+	MPU_IIC_SCL=1;MPU_IIC_Delay();	 
+	while(MPU_READ_SDA)
+	{
+		ucErrTime++;
+		if(ucErrTime&gt;250)
+		{
+			MPU_IIC_Stop();
+			return 1;
+		}
+	}
+	MPU_IIC_SCL=0;//时钟输出0 	   
+	return 0;  
+} 
+//产生ACK应答
+void MPU_IIC_Ack(void)
+{
+	MPU_IIC_SCL=0;
+	MPU_SDA_OUT();
+	MPU_IIC_SDA=0;
+	MPU_IIC_Delay();
+	MPU_IIC_SCL=1;
+	MPU_IIC_Delay();
+	MPU_IIC_SCL=0;
+}
+//不产生ACK应答		    
+void MPU_IIC_NAck(void)
+{
+	MPU_IIC_SCL=0;
+	MPU_SDA_OUT();
+	MPU_IIC_SDA=1;
+	MPU_IIC_Delay();
+	MPU_IIC_SCL=1;
+	MPU_IIC_Delay();
+	MPU_IIC_SCL=0;
+}					 				     
+//IIC发送一个字节
+//返回从机有无应答
+//1，有应答
+//0，无应答			  
+void MPU_IIC_Send_Byte(u8 txd)
+{                        
+    u8 t;   
+	MPU_SDA_OUT(); 	    
+    MPU_IIC_SCL=0;//拉低时钟开始数据传输
+    for(t=0;t&lt;8;t++)
+    {              
+        MPU_IIC_SDA=(txd&amp;0x80)&gt;&gt;7;
+        txd&lt;&lt;=1; 	  
+		    MPU_IIC_SCL=1;
+		    MPU_IIC_Delay(); 
+		    MPU_IIC_SCL=0;	
+		    MPU_IIC_Delay();
+    }	 
+} 	    
+//读1个字节，ack=1时，发送ACK，ack=0，发送nACK   
+u8 MPU_IIC_Read_Byte(unsigned char ack)
+{
+	unsigned char i,receive=0;
+	MPU_SDA_IN();//SDA设置为输入
+    for(i=0;i&lt;8;i++ )
+	{
+        MPU_IIC_SCL=0; 
+        MPU_IIC_Delay();
+		MPU_IIC_SCL=1;
+        receive&lt;&lt;=1;
+        if(MPU_READ_SDA)receive++;   
+		MPU_IIC_Delay(); 
+    }					 
+    if (!ack)
+        MPU_IIC_NAck();//发送nACK
+    else
+        MPU_IIC_Ack(); //发送ACK   
+    return receive;
 }
 
 </code></pre>
-<p>MainApp.java:</p>
-<pre><code class="language-java">package org.example;
+<p>iic_analog.h</p>
+<pre><code>#ifndef _iic_analog_h_
+#define _iic_analog_h_
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+#include &quot;stm32f10x.h&quot;
+#include &quot;sys.h&quot;
 
-public class MainApp {
-    public static void main(String[] args) {
-        //创建应用程序的上下文
-        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;Bean.xml&quot;);
-        //使用已创建的上下文的 getBean() 方法来获得所需的 bean，这个方法使用 bean 的 ID 返回一个最终可以转换为实际对象的通用对象。
-        HelloWorld obj = (HelloWorld) context.getBean(&quot;helloworld&quot;);
-        obj.getMessage();
-    }
+/*********************************************************************************/
+/*修改模拟IIC的读取引脚以及引脚的端口号											 */
+/*这些宏定义定义好了以后引脚初始化函数会自行初始化时钟使能等必要的参数			 */
+/*********************************************************************************/
+#define IIC_GPIO (GPIOB)
+#define IIC_GOIO_SDA (GPIOB)
+#define IIC_GPIO_SCL (GPIOB)
+#define IIC_SDA (GPIO_Pin_7)
+#define IIC_SCL (GPIO_Pin_6)
+/*********************************************************************************/
+
+
+
+
+/************************************************************************************/
+/*使用此函数 初始化 模拟IIC  其中参数 在以上宏定义中 有定义 使用时只需要修改宏定义即可 */
+/* 此函数调用时 请复制以下代码 
+	IIC_GPIO_Configuration( IIC_GOIO_SDA , IIC_SDA , IIC_GPIO_SCL , IIC_SCL );  */
+/************************************************************************************/
+//IIC 引脚配置
+extern void IIC_GPIO_Configuration( GPIO_TypeDef * GPIOx_SDA , uint16_t SDA_Pin , GPIO_TypeDef * GPIOx_SCL , uint16_t SCL_Pin );
+
+
+
+
+
+
+/*********************************************************************************/
+/*使用以下代码时请勿修改														 */
+/*																				 */
+/*********************************************************************************/
+//使用软件模拟I2C
+#define SET_SDA		{ GPIO_SetBits( IIC_GPIO , IIC_SDA ); }
+#define RESET_SDA	{ GPIO_ResetBits( IIC_GPIO , IIC_SDA );}
+#define SET_SCL		{ GPIO_SetBits( IIC_GPIO , IIC_SCL ); }
+#define RESET_SCL 	{ GPIO_ResetBits( IIC_GPIO , IIC_SCL); }
+#define IIC_SDA_STATE (IIC_GPIO-&gt;IDR&amp;IIC_SDA)
+#define IIC_SCL_STATE (IIC_GPIO-&gt;IDR&amp;IIC_SDA)
+
+#define IIC_DELAY { IIC_Delay(); }
+
+enum IIC_REPLAY_ENUM
+{
+	IIC_NACK = 0,
+	IIC_ACK = 1
+};
+
+enum IIC_BUS_STATE_ENUM
+{
+	IIC_BUS_READY = 0,
+	IIC_BUS_BUSY=1,
+	IIC_BUS_ERROR=2
+};
+
+//IIC 延时
+extern void IIC_Delay(void);
+//IIC 启动函数
+extern u8 IIC_Start(void);
+//IIC 停止函数
+extern void IIC_Stop(void);
+//IIC 发送动作
+extern void IIC_SendACK(void);
+//IIC 停止动作
+extern void IIC_SendNACK(void);
+//IIC 发送单字节
+extern u8 IIC_SendByte(u8 Data);
+//IIC 接收单字节
+extern u8 IIC_RecvByte(void);
+//IIC 写入单字节
+extern void Single_Write_IIC(u8 SlaveAddress,u8 REG_Address,u8 REG_data);
+//IIC 读取单字节
+extern u8 Single_Read_IIC(u8 SlaveAddress, u8 REG_Address);
+
+
+//GPIO 过滤器
+extern uint16_t GPIO_Filter( GPIO_TypeDef * GPIOx );
+
+#endif
+
+
+</code></pre>
+<p>iic_analog.c</p>
+<pre><code class="language-C">#include &quot;stm32f10x.h&quot;
+#include &quot;iic_analog.h&quot;
+
+
+/************************************************************/
+/*模拟IIC引脚初始化函数*/
+/************************************************************/
+void IIC_GPIO_Configuration( GPIO_TypeDef * GPIOx_SDA , uint16_t SDA_Pin , GPIO_TypeDef * GPIOx_SCL , uint16_t SCL_Pin )
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+	uint32_t RCC_GPIOx_SDA = 0;
+	uint32_t RCC_GPIOx_SCL = 0;
+
+	//得到滤波后的引脚端口
+	RCC_GPIOx_SDA = GPIO_Filter( GPIOx_SDA );
+	RCC_GPIOx_SCL = GPIO_Filter( GPIOx_SCL );
+	
+	//使能时钟
+  RCC_APB2PeriphClockCmd(RCC_GPIOx_SDA,ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_GPIOx_SCL,ENABLE);
+
+	//配置引脚
+	GPIO_InitStructure.GPIO_Pin = SDA_Pin;
+	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
+	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_OD;
+	GPIO_Init(GPIOx_SDA, &amp;GPIO_InitStructure);
+
+	GPIO_InitStructure.GPIO_Pin = SCL_Pin;
+	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
+	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_OD;
+	GPIO_Init(GPIOx_SCL, &amp;GPIO_InitStructure);
+
+	//初始化ICC的模式
+	SET_SDA;
+	SET_SCL;  
+}
+
+
+/************************************************************/
+/************************************************************/
+void IIC_Delay(void)
+{
+	u32 i = 5;
+	while( i-- );
+}
+
+/*******************************************************************
+TWI_START
+发送启动数据
+*******************************************************************/
+u8 IIC_Start(void)
+{
+	SET_SDA;
+	IIC_DELAY;
+
+	SET_SCL;
+	IIC_DELAY;
+
+	if( IIC_SDA_STATE == RESET )
+	{
+		return IIC_BUS_BUSY;
+	}
+
+	RESET_SDA;
+	IIC_DELAY;
+
+	RESET_SCL;
+	IIC_DELAY;
+
+	if( IIC_SDA_STATE == SET )
+	{
+		return IIC_BUS_ERROR;
+	}
+
+	return IIC_BUS_READY;
+}
+
+/*******************************************************************
+TWI_STOP
+发送停止数据
+*******************************************************************/
+void IIC_Stop(void)
+{
+	RESET_SDA;
+	IIC_DELAY;
+
+	SET_SCL;
+	IIC_DELAY;
+
+	SET_SDA;
+	IIC_DELAY;
+}
+
+/*******************************************************************************
+* 函数名称:TWI_SendNACK                                                                     
+* 描    述:收到数据,发送NACK                                                                                                                                       
+ *******************************************************************************/
+void IIC_SendNACK(void)
+{
+	RESET_SDA;
+	IIC_DELAY;
+	SET_SCL;
+	IIC_DELAY;
+	RESET_SCL; 
+	IIC_DELAY; 
+}
+
+/*******************************************************************************
+* 函数名称:TWI_SendACK                                                                     
+* 描    述:收到数据,发送ACK                                                                                                                                        
+*******************************************************************************/
+void IIC_SendACK(void)
+{
+	SET_SDA;
+	IIC_DELAY;
+	SET_SCL;
+	IIC_DELAY;
+	RESET_SCL; 
+	IIC_DELAY;
+}
+
+/*******************************************************************************
+ * 函数名称:TWI_SendByte                                                                     
+ * 描    述:发送一个字节                                                                                                                                      
+ *******************************************************************************/
+u8 IIC_SendByte(u8 Data)
+{
+	 u8 i;
+	 RESET_SCL;
+	 for(i=0;i&lt;8;i++)
+	 {  
+		//---------数据建立----------
+		if(Data&amp;0x80)
+		{
+			SET_SDA;
+		}
+		else
+		{
+			RESET_SDA;
+		} 
+		Data&lt;&lt;=1;
+		IIC_DELAY;
+		//---数据建立保持一定延时----
+		//----产生一个上升沿[正脉冲] 
+		SET_SCL;
+		IIC_DELAY;
+		RESET_SCL;
+		IIC_DELAY;//延时,防止SCL还没变成低时改变SDA,从而产生START/STOP信号
+		//---------------------------   
+	 }
+	 //接收从机的应答 
+	 SET_SDA; 
+	 IIC_DELAY;
+	 SET_SCL;
+	 IIC_DELAY;   
+	 if(IIC_SDA_STATE)
+	 {
+		RESET_SCL;
+		return IIC_NACK;
+	 }
+	 else
+	 {
+		RESET_SCL;
+		return IIC_ACK;  
+	 }    
+}
+
+/*******************************************************************************
+ * 函数名称:TWI_ReceiveByte                                                                     
+ * 描    述:接收一个字节                                                                                                                                       
+ *******************************************************************************/
+u8 IIC_RecvByte(void)
+{
+	 u8 i,Dat = 0;
+	 SET_SDA;
+	 RESET_SCL; 
+	 Dat=0;
+	 for(i=0;i&lt;8;i++)
+	 {
+		SET_SCL;//产生时钟上升沿[正脉冲],让从机准备好数据 
+		IIC_DELAY; 
+		Dat&lt;&lt;=1;
+		if(IIC_SDA_STATE) //读引脚状态
+		{
+			Dat|=0x01; 
+		}   
+		RESET_SCL;//准备好再次接收数据  
+		IIC_DELAY;//等待数据准备好         
+	 }
+	 return Dat;
+}
+
+/******单字节写入*******************************************/
+void Single_Write_IIC(u8 SlaveAddress,u8 REG_Address,u8 REG_data)
+{
+    IIC_Start();                  //起始信号
+    IIC_SendByte(SlaveAddress);   //发送设备地址+写信号
+    IIC_SendByte(REG_Address);    //内部寄存器地址， //请参考中文pdf22页 
+    IIC_SendByte(REG_data);       //内部寄存器数据， //请参考中文pdf22页 
+    IIC_Stop();                   //发送停止信号
+}
+
+/********单字节读取*****************************************/
+u8 Single_Read_IIC(u8 SlaveAddress, u8 REG_Address)
+{  
+	u8 REG_data;
+    IIC_Start();                          //起始信号
+    IIC_SendByte(SlaveAddress);           //发送设备地址+写信号
+    IIC_SendByte(REG_Address);            //发送存储单元地址，//从0开始	
+    IIC_Start();                          //起始信号
+    IIC_SendByte(SlaveAddress+1);         //发送设备地址+读信号
+    REG_data = IIC_RecvByte();              //读出寄存器数据
+	IIC_SendACK();   
+	IIC_Stop();                           //停止信号
+    return REG_data; 
+}
+
+/*******************************************************************
+引脚端口过滤器 返回值为 引脚端口的时钟编号
+*******************************************************************/
+uint16_t GPIO_Filter( GPIO_TypeDef * GPIOx )
+{	 
+	uint32_t RCC_GPIOx = 0; 
+
+	if( GPIOx == GPIOA )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOA;
+	}
+	else if( GPIOx == GPIOA )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOA;
+	}
+	else if( GPIOx == GPIOB )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOB;
+	}
+	else if( GPIOx == GPIOC )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOC;
+	}
+	else if( GPIOx == GPIOD )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOD;
+	}
+	else if( GPIOx == GPIOE )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOE;
+	}
+	else if( GPIOx == GPIOF )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOF;
+	}
+	else if( GPIOx == GPIOG )
+	{
+		RCC_GPIOx = RCC_APB2Periph_GPIOG;
+	}
+
+	return RCC_GPIOx;
+}
+
+</code></pre>
+<p>Kalman_Filter.h</p>
+<pre><code class="language-c">#ifndef _KALMAN_FILTER_H_
+#define _KALMAN_FILTER_H_
+
+float Kalman_Filter(float Accel,float Gyro);	
+
+#endif
+
+</code></pre>
+<p>Kalman_Filter.c</p>
+<pre><code class="language-C">#include &quot;Kalman_Filter.h&quot;
+
+float Angle = 0;
+
+//******卡尔曼参数************
+
+const float Q_angle=0.001;  
+const float Q_gyro=0.003;
+const float R_angle=0.5;
+const float dt=0.01;	                  //dt为kalman滤波器采样时间;
+const char  C_0 = 1;
+float Q_bias, Angle_err;
+float PCt_0, PCt_1, E;
+float K_0, K_1, t_0, t_1;
+float Pdot[4] ={0,0,0,0};
+float PP[2][2] = { { 1, 0 },{ 0, 1 } };
+
+float Kalman_Filter(float Accel,float Gyro)		
+{
+	Angle+=(Gyro - Q_bias) * dt; //先验估计
+	
+	Pdot[0]=Q_angle - PP[0][1] - PP[1][0]; // Pk-先验估计误差协方差的微分
+
+	Pdot[1]= -PP[1][1];
+	Pdot[2]= -PP[1][1];
+	Pdot[3]=Q_gyro;
+	
+	PP[0][0] += Pdot[0] * dt;   // Pk-先验估计误差协方差微分的积分
+	PP[0][1] += Pdot[1] * dt;   // =先验估计误差协方差
+	PP[1][0] += Pdot[2] * dt;
+	PP[1][1] += Pdot[3] * dt;
+		
+	Angle_err = Accel - Angle;	//zk-先验估计
+	
+	PCt_0 = C_0 * PP[0][0];
+	PCt_1 = C_0 * PP[1][0];
+	
+	E = R_angle + C_0 * PCt_0;
+	
+	K_0 = PCt_0 / E;
+	K_1 = PCt_1 / E;
+	
+	t_0 = PCt_0;
+	t_1 = C_0 * PP[0][1];
+
+	PP[0][0] -= K_0 * t_0;		 //后验估计误差协方差
+	PP[0][1] -= K_0 * t_1;
+	PP[1][0] -= K_1 * t_0;
+	PP[1][1] -= K_1 * t_1;
+		
+	Angle	+= K_0 * Angle_err;	 //后验估计
+	Q_bias	+= K_1 * Angle_err;	 //后验估计
+	Gyro   = Gyro - Q_bias;	 //输出值(后验估计)的微分=角速度
+
+  return Angle;
+}
+
+</code></pre>
+<p>ISys.h</p>
+<pre><code class="language-C">#ifndef _ISys_h_
+#define _ISys_h_
+
+extern void MPU6050_Configuration(void);
+
+#endif
+
+</code></pre>
+<p>ISys.c</p>
+<pre><code class="language-c">#include &quot;stm32f10x.h&quot;
+#include &quot;ISys.h&quot;
+#include &quot;iic_analog.h&quot;
+#include &quot;MPU6050.h&quot;
+#include &quot;delay.h&quot;
+
+void MPU6050_Configuration(void)
+{
+	IIC_GPIO_Configuration( IIC_GOIO_SDA , IIC_SDA , IIC_GPIO_SCL , IIC_SCL );
+	delay_ms(300);
+	MPU6050_Inital();
+
+}
+
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[stm32编码器测速]]></title>
+        <id>https://siliyuan6.github.io/post/stm32-bian-ma-qi-ce-su/</id>
+        <link href="https://siliyuan6.github.io/post/stm32-bian-ma-qi-ce-su/">
+        </link>
+        <updated>2021-03-04T06:46:07.000Z</updated>
+        <content type="html"><![CDATA[<p>摘要：编码器是一种将角位移或者角速度转换成一串电数字脉冲的旋转式传感器。编码器又分为光电编码器和霍尔编码器。</p>
+<p>霍尔编码器是有霍尔码盘和霍尔元件组成。霍尔码盘是在一定直径的圆板上等分的布置有不同的磁极。霍尔码盘与电动机同轴，电动机旋转时，霍尔元件检测输出若干脉冲信号，为判断转向，一般输出两组存在一定相位差的方波信号。<br>
+<a href="https://imgchr.com/i/Dv7n3R"><img src="https://s3.ax1x.com/2020/12/07/Dv7n3R.png" alt="Dv7n3R.png" loading="lazy"></a></p>
+<p>采集数据方式：</p>
+<p>第一种软件技术直接采用外部中断进行采集，根据AB相位差的不同可以判断正负。</p>
+<p>第二种硬件技术直接使用定时器的编码器模式。</p>
+<p>这里采用第二种。也是大家常说的四倍频，提高测量精度的方法。其实就是把AB相的上升沿和下降沿都采集而已，所以1变4。自己使用外部中断方式实现就比较占用资源了，所以不建议使用。</p>
+<p>速度计算方法：</p>
+<p>真实的物理转速：</p>
+<p>电机转动一圈的脉冲数：num1				 单位：个</p>
+<p>单位时间：t 												单位：秒</p>
+<p>单位时间内捕获的脉冲变化数：num2 	单位：个 （反应电机正反转）</p>
+<p>电机轮子半径：r										 单位：m</p>
+<p>圆周率：pi 												  单位：无</p>
+<p>速度：speed           								    单位： mm/s</p>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/Dv7ug1"><img src="https://s3.ax1x.com/2020/12/07/Dv7ug1.png" alt="Dv7ug1.png" loading="lazy"></a></figure>
+<p>因为半径用的是m为单位，速度为mm所以需要乘以1000。</p>
+<p>代码：（使用TIM2和TIM4两个定时器来测两个轮子的速度）</p>
+<p>将编码器AB相使用的引脚设置成定时器的编码器模式，我们根据TIMx-&gt;CNT寄存器数据的变化，计算出单位时间内，脉冲的变化值。</p>
+<p>然后在定时器中断服务函数中进行速度计算。</p>
+<pre><code class="language-C">#include &quot;encoder.h&quot;
+
+/**************************************************************************
+函数功能：把TIM2初始化为编码器接口模式
+入口参数：无
+返回  值：无
+**************************************************************************/
+void Encoder_Init_TIM2(void)
+{
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;  
+	TIM_ICInitTypeDef TIM_ICInitStructure;  
+	GPIO_InitTypeDef GPIO_InitStructure;
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);    //使能定时器2的时钟
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);   //使能PA端口时钟
+
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1;	//端口配置
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;   //浮空输入
+	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);					//根据设定参数初始化GPIOA
+
+	TIM_TimeBaseStructInit(&amp;TIM_TimeBaseStructure);
+	TIM_TimeBaseStructure.TIM_Prescaler = 0x0;              //预分频器 
+	TIM_TimeBaseStructure.TIM_Period = ENCODER_TIM_PERIOD;  //设定计数器自动重装值
+	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //选择时钟分频：不分频
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;TIM向上计数  
+	TIM_TimeBaseInit(TIM2, &amp;TIM_TimeBaseStructure);
+	
+	TIM_EncoderInterfaceConfig(TIM2, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);//使用编码器模式3
+	
+	TIM_ICStructInit(&amp;TIM_ICInitStructure);
+	TIM_ICInitStructure.TIM_ICFilter = 10;
+	TIM_ICInit(TIM2, &amp;TIM_ICInitStructure);
+	TIM_ClearFlag(TIM2, TIM_FLAG_Update);                   //清除TIM的更新标志位
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+	//Reset counter
+	TIM_SetCounter(TIM2,0);
+	//===============================================
+	TIM2-&gt;CNT = 0x7fff;
+	//===============================================
+	TIM_Cmd(TIM2, ENABLE); 
+}
+/**************************************************************************
+函数功能：把TIM4初始化为编码器接口模式
+入口参数：无
+返回  值：无
+**************************************************************************/
+void Encoder_Init_TIM4(void)
+{
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;  
+	TIM_ICInitTypeDef TIM_ICInitStructure;  
+	GPIO_InitTypeDef GPIO_InitStructure;
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);    //使能定时器4的时钟
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);   //使能PB端口时钟
+
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6|GPIO_Pin_7;	//端口配置
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;   //浮空输入
+	GPIO_Init(GPIOB, &amp;GPIO_InitStructure);					//根据设定参数初始化GPIOB
+
+	TIM_TimeBaseStructInit(&amp;TIM_TimeBaseStructure);
+	TIM_TimeBaseStructure.TIM_Prescaler = 0x0;              // 预分频器 
+	TIM_TimeBaseStructure.TIM_Period = ENCODER_TIM_PERIOD;  //设定计数器自动重装值
+	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //选择时钟分频：不分频
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;TIM向上计数  
+	TIM_TimeBaseInit(TIM4, &amp;TIM_TimeBaseStructure);
+	TIM_EncoderInterfaceConfig(TIM4, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);//使用编码器模式3
+	TIM_ICStructInit(&amp;TIM_ICInitStructure);
+	TIM_ICInitStructure.TIM_ICFilter = 10;
+	TIM_ICInit(TIM4, &amp;TIM_ICInitStructure);
+	TIM_ClearFlag(TIM4, TIM_FLAG_Update);                   //清除TIM的更新标志位
+	TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
+	//Reset counter
+	TIM_SetCounter(TIM4,0);
+	//===============================================
+	TIM4-&gt;CNT = 0x7fff;
+	//===============================================
+	TIM_Cmd(TIM4, ENABLE); 
+}
+
+/**************************************************************************
+函数功能：读取编码器脉冲差值，读取单位时间内的脉冲变化值
+入口参数：TIM_TypeDef * TIMx
+返回  值：无
+**************************************************************************/
+s16 getTIMx_DetaCnt(TIM_TypeDef * TIMx)
+{
+	s16 cnt;
+	cnt = TIMx-&gt;CNT-0x7fff;
+	TIMx-&gt;CNT = 0x7fff;
+	return cnt;
+}
+
+/**************************************************************************
+函数功能：计算左右轮速
+入口参数：int *leftSpeed,int *rightSpeed
+返回  值：无
+		//计算左右车轮线速度，正向速度为正值 ，反向速度为负值，速度为乘以1000之后的速度 mm/s
+		//一定时间内的编码器变化值*转化率（转化为直线上的距离m）*200s（5ms计算一次） 得到 m/s *1000转化为int数据
+
+		一圈的脉冲数：
+			左：1560
+			右：1560
+		轮子半径：0.03m
+		轮子周长：2*pi*r
+		一个脉冲的距离：
+			左：0.000120830m
+			右：0.000120830m
+		速度分辨率：
+			左： 0.0240m/s 
+			右： 0.0240m/s 
+			200  5ms的倒数
+			1000 扩大分辨率
+**************************************************************************/
+
+void Get_Motor_Speed(int *leftSpeed,int *rightSpeed)
+{
+	//5ms测速 5ms即这里说的单位时间  	
+	*leftSpeed   = getTIMx_DetaCnt(TIM4)*1000*200*0.000120830;  
+	*rightSpeed  = getTIMx_DetaCnt(TIM2)*1000*200*0.000120830;
+}
+
+</code></pre>
+<p>main.c</p>
+<pre><code class="language-C">#include &quot;sys.h&quot;
+
+//====================自己加入的头文件===============================
+#include &quot;delay.h&quot;
+#include &quot;led.h&quot;
+#include &quot;encoder.h&quot;
+#include &quot;usart3.h&quot;
+#include &quot;timer.h&quot;
+#include &lt;stdio.h&gt;
+//===================================================================
+
+int leftSpeedNow  =0;
+int rightSpeedNow =0;
+
+int main(void)
+{ 
+
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_Disable,ENABLE);
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);//禁用JTAG 启用 SWD
+	
+	MY_NVIC_PriorityGroupConfig(2);	//=====设置中断分组
+	
+	delay_init();	    	        //=====延时函数初始化
+	LED_Init();                     //=====LED初始化    程序灯	
+	
+	usart3_init(9600);              //=====串口3初始化  蓝牙 发送调试信息
+
+	Encoder_Init_TIM2();            //=====初始化编码器1接口
+	Encoder_Init_TIM4();            //=====初始化编码器2接口
+	
+	TIM3_Int_Init(50-1,7200-1);     //=====定时器初始化 5ms一次中断
+	
+	while(1)
+	{
+		printf(&quot;L=%d,R=%d\r\n&quot;,leftSpeedNow,rightSpeedNow);
+		delay_ms(15);
+	} 
+}
+
+//5ms 定时器中断服务函数
+void TIM3_IRQHandler(void)   //TIM3中断
+{
+	if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) //检查指定的TIM中断发生与否:TIM 中断源 
+	{
+		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);   //清除TIMx的中断待处理位:TIM 中断源 
+		
+		Get_Motor_Speed(&amp;leftSpeedNow,&amp;rightSpeedNow);
+		Led_Flash(100);
+	}
 }
 </code></pre>
 ]]></content>
